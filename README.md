@@ -29,5 +29,5 @@ Projeto front do site do Divert Fest para o PI
 - HTML do cadastro
 
 ## O que ainda precisa fazer?
--CSS e JavaScript da tela de cadastro
--HTML e CSS da tela de Login
+- CSS e JavaScript da tela de cadastro
+- HTML e CSS da tela de Login
