@@ -24,6 +24,7 @@ Projeto front do site do Divert Fest para o PI
 - Gere um clone do repositório no seu computador copiando o link no "code" e colocando o código "git clone 'link do repositorio' "
 - Sempre que for fazer alguma alteração, não esqueça de dar o "git commit -m " com a mensagem que informe a alteração
 - Faça sempre no branch feature (ainda vou criar)
+- Não se esqueça de dar "git add" e depois de dar o "git push"
 
 ## O que já está feito ? 
 - HTML do cadastro
