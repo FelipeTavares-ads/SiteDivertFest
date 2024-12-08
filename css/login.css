@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+  }
+
+  .conteudo{
+    background-color: #F0EFEF;
+    display: flex;
+    width: 1200px;
+    height: 699px;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+  }
