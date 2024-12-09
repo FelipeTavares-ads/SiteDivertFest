@@ -1,15 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: "Inter";
     box-sizing: border-box
   }
 
-  .conteudo{
+  body{
     background-color: #F0EFEF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .conteudo{
     display: flex;
     width: 1200px;
-    height: 699px;
+    height: 650px;
     flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 35px;
+    background: #FFF;
+    
+  }
+
+  .quadradoamarelo{
+    width: 30%;
+    height: 100%;
+    border-radius: 35px 0px 0px 35px;
+    background: #FEC95A;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .container-amarelo{
+    height: 30rem;
+
+  }
+
+  .titulo{
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Kreon";
+    font-size: 42px;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .descricao{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px 30px 15px 30px;
+  }
+
+  .botao{
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 3px solid #FFF;
+    padding: 0.4rem;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .header-back{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .conteudo-login-amarelo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    
+  }
+
+
+  .back{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 30px;
+    padding-top: 20px;
+    text-decoration: none;
+  }
+
+  .back:hover{
+    color: #F0EFEF;
+  }
+
+  .logo{
+    width: 140px;
+    height: 118px;
+    flex-shrink: 0;
+  }
+
+  .quadradobranco{
+    width: 70%;
+    display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .container{
+    width: 98%;
+    height: 20rem;
+  }
+
+  .titulo-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+  }
+
+  .titulo-login h2{
+    color: #FEC95A;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  [type="email"] {
+    margin-bottom: 25px;
+    width: 580px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [type="password"] {
+    margin-bottom: 5px;
+    width: 580px;
+    height: 60px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  .botao-logar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+
+  .botao-logar button{
+    width: 25%;
+    height: 3rem;
+    border: 0px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #FEC95A;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .esquecisenha{
+    text-decoration: none;
+    color: #2D3E50;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  
+  .formularios{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+  }
+
+  .icone-mail{
+    width: 44px;
+    flex-shrink: 0;
+  }
+
+  .icone-cadeado{
+    width: 44px;
+    flex-shrink: 0;
   }

@@ -7,29 +7,49 @@
     <title>Divert Fest</title>
 </head>
 <body>
-    <div class="conteudo">
-            <div class="quadradoamarelo">
-                <a href="#">voltar</a> <br>
-                <h2 class ="titulo">Bem-Vindo!</h2>
-                <p class="descricao">Por favor, realize o seu login. Caso não esteja cadastrado:</p>
-                <button id="botao">Cadastre-se</button>
-            </div>
+    <section class="main">
+        <div class="conteudo">
+                <div class="quadradoamarelo">
+                    <div class="container-amarelo">
+                        <div class="header-back">   
+                            <a href="#" class="back">voltar</a> <br>
+                        </div>
+                        <div class="conteudo-login-amarelo">
+                            <img class="logo" src="/css/imagens/logo.png" alt="">
+                            <h2 class ="titulo">Bem-Vindo!</h2>
+                            <p class="descricao">Por favor, realize o seu login. Caso não esteja cadastrado:</p>
+                            <button class="botao">Cadastre-se</button>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="quadradobranco">
-                    <h2>Login</h2>
-                    <br>
+                <div class="quadradobranco">
+                    <div class="container">
+                        <div class="titulo-login">
+                            <h2>Login</h2>
+                        </div>
+                        
+                        <div class="formularios">
+                            <form method="post">
+                                <div class="email">
+                                    <img class="icone-mail" src="/css/imagens/mail-svgrepo-com.svg" alt="">
+                                    <input type="email" name="email" id="email" placeholder="Digite seu email" >
+                                </div>
+                                <div class="senha">
+                                    <img class="icone-cadeado" src="/css/imagens/lock-svgrepo-com.svg" alt="">
+                                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" >
+                                </div>
+                            </form>
+                            <a class="esquecisenha" href="#">Esqueci minha senha</a>
+                        </div>
 
-                    <form method="post">
-                        <img src="" alt="">
-                        <input type="email" name="email" id="email" placeholder="Digite seu email" >
-                        <img src="" alt="">
-                        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" >
-                    </form>
-
-                    <a href="">Esqueci minha senha</a>
-                    <br>
-                    <button>Logar</button>
-            </div>
-    </div>
+                        <div class="botao-logar">
+                            <button>Logar</button>
+                        </div>
+                        
+                    </div>
+                </div>
+        </div>
+    </section>
 </body>
 </html>
