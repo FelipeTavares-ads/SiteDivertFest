@@ -17,17 +17,17 @@
   }
 
  
-
-  aside {
+   .quadradoamarelo {
     background-color: #FEC95A;
     backdrop-filter: blur(2px);
     width: 365px;
     height: 892px;
     flex-shrink: 0;
     border-radius: 20px;
+    width: 40%;
   }
 
-  section{
+  .quadradao {
     background-color: white;
     fill: #FFF;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -35,7 +35,6 @@
     height: 892px;
     flex-shrink: 0;
     border-radius: 20px;
-    position: absolute;
   }
 
   button {
@@ -52,7 +51,7 @@
     line-height: normal;
   }
 
-  button .quadradoamarelo{
+  button {
     color: white;
     width: 166.95px;
     height: 42.875px;
