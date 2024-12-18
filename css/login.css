@@ -21,8 +21,8 @@
 
   .conteudo{
     display: flex;
-    width: 1200px;
-    height: 650px;
+    width: 1100px;
+    height: 600px;
     flex-shrink: 0;
     justify-content: flex-start;
     align-items: center;

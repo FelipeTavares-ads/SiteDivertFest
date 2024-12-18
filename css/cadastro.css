@@ -1,76 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+
+:root {
+  --larguraform: 590px;
+  --alturaform: 60px;
+  --larguraformmedium: 292px;
+}
+
 * {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
     box-sizing: border-box
-  }
-  
-  form div{
-    margin: 10px;
   }
 
   body{
     background-color: #F0EFEF;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    width: 1440px;
-    height: 1024px;
-    padding: 66px 89px 65.82px 90px;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .conteudo{
+    display: flex;
+    width: 1100px;
+    height: 600px;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 35px;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+  }
+
+  .quadradoamarelo{
+    width: 30%;
+    height: 100%;
+    border-radius: 35px 0px 0px 35px;
+    background: #FEC95A;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .container-amarelo{
+    height: 30rem;
+
+  }
+
+  .titulo{
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Kreon";
+    font-size: 42px;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .descricao{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin: 0px 30px 15px 30px;
+  }
+
+  .conteudo-cadastro-amarelo button{
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 3px solid #FFF;
+    padding: 0.4rem;
+    background-color: transparent;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 120px;
+  }
+
+  .header-back{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .conteudo-cadastro-amarelo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 10%;
+    
+  }
+
+
+  .back{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 30px;
+    padding-top: 20px;
+    text-decoration: none;
+  }
+
+  .back:hover{
+    color: #F0EFEF;
+  }
+
+  .logo{
+    width: 140px;
+    height: 118px;
+    flex-shrink: 0;
+  }
+
+  .quadradobranco{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .container{
+    width: 98%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
- 
-   .quadradoamarelo {
-    background-color: #FEC95A;
-    backdrop-filter: blur(2px);
-    width: 365px;
-    height: 892px;
-    flex-shrink: 0;
-    border-radius: 20px;
-    width: 40%;
+  .titulo-subtitulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    width: 87%;
+    margin-bottom: 25px;
   }
 
-  .quadradao {
-    background-color: white;
-    fill: #FFF;
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    width: 910px;
-    height: 892px;
-    flex-shrink: 0;
-    border-radius: 20px;
-  }
-
-  button {
-    color: white;
-    width: 166.95px;
-    height: 42.875px;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background: #FEC95A;
-    font-family: Inter;
-    font-size: 24px;
+  .titulo-subtitulo h2{
+    color: #FEC95A;
+    text-align: center;
+    font-family: Epilogue;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 
-  button {
-    color: white;
-    width: 166.95px;
-    height: 42.875px;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background: #FEC95A;
+  .titulo-subtitulo h4{
+    color: #CDCDCD;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    border-radius: 20px;
-    border: 3px solid #FFF;
   }
 
-  [type="text"], [type="number"] {
-    margin-bottom: 30px;
-    width: 609px;
-    height: 60px;
+  [type="email"] {
+    margin-bottom: 5px;
+    width: var(--larguraform);
+    height: var(--alturaform);
     flex-shrink: 0;
     border-radius: 10px;
     background: rgba(45, 62, 80, 0.10);
@@ -81,4 +184,140 @@
     font-weight: 700;
     line-height: normal;
     border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [type="password"] {
+    margin-bottom: 5px;
+    width: var(--larguraformmedium);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+    margin-bottom: 10px;
+  }
+
+  [type="number"] {
+    margin-bottom: 5px;
+    width: var(--larguraform);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [type="text"] {
+    margin-bottom: 5px;
+    width: var(--larguraform);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [name ="cpf"] {
+    margin-bottom: 5px;
+    width: var(--larguraformmedium);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [name ="celular"] {
+    margin-bottom: 5px;
+    width: var(--larguraformmedium);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+  
+  .formularios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+  }
+
+  .check {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    color: #000;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .check p {
+    margin-left: 8px;
+  }
+
+  .check input {
+    margin-top: 4px;
+  }
+
+  .botao button{
+    border-radius: 50px;
+    background: #FEC95A;
+    width: 166.95px;
+    height: 42.875px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-color: #FFCB59;
+    margin-top: 15px;
   }
