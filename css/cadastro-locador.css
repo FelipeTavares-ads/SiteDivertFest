@@ -84,6 +84,26 @@
     font-weight: 700;
     line-height: normal;
     width: 120px;
+    cursor: pointer;
+  
+  }
+
+  .conteudo-cadastro-amarelo button:hover{
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 3px solid #FFF;
+    box-shadow: inset;
+    padding: 0.4rem;
+    background-color: #FFF;
+    color: #FEC95A;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 120px;
+    cursor: pointer;
+    box-shadow: 0px 1.8px 1.8px 0px rgba(0, 0, 0, 0.15);
   }
 
   .header-back{
@@ -98,8 +118,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 10%;
-    
+    padding-top: 10%;    
   }
 
 
@@ -356,4 +375,5 @@
     line-height: normal;
     border-color: #FFCB59;
     margin-top: 15px;
+    cursor: pointer;
   }
