@@ -74,5 +74,46 @@
 }
 
 .lupa {
-    width: 15px;
+    width: 20px;
+    color: rgba(146, 146, 146, 0.53);
+
+}
+
+.icon-lupa {
+    color: rgba(146, 146, 146, 0.53);
+    background: rgba(45, 62, 80, 0.15);
+    box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25);
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px 0 0 10px ;
+
+}
+
+.nav-toggler {
+    width: 100%;
+    color: red;
+}
+
+.input-group {
+    margin-top: 70px;
+    margin-left: 7.5%;
+    width: 85%;
+    color: rgba(146, 146, 146, 0.53);
+    font-family: Epilogue;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+    box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25)
+}
+
+.input-group input {
+    border-radius: 10px;
+    border: 0.5px solid rgba(45, 62, 80, 0.20);
+    background: rgba(45, 62, 80, 0.15);
+    border-left: 0px;
+    border-right: 0px;
 }
