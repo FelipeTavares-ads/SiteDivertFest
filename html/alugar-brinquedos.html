@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="\css\pesquisa.css">
+    <link rel="stylesheet" type="text/css" href="/css/alugar-brinquedos.css">
     <title>Divert Fest</title>
 
   </head>
@@ -45,65 +45,76 @@
         </div>
       </nav>
 
-      <div class="input-group mb-3">
-        <div class="icon-lupa">
-          <img class="lupa" src="/css/imagens/lupa.png">
-        </div>
-        <input type="text" class="form-control" placeholder=  "BUSQUE O QUE DESEJA" aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
-      </div>
 
-        <div class="filtros">
-          <h2>Filtros > </h2>
-          <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Tipos
-            </a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Pula-Pula
-                </label>
-              </div>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+          <li class="breadcrumb-item"><a href="#">Explorar</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Alugar Brinquedo</li>
+        </ol>
+      </nav>
+
+      <div class="espaco">
+        <div class="bloco">
+          <div class="img">
+            <img class="img-brinquedo" src="/css/imagens/toto-1.jpg" alt="Brinquedo">
+          </div>
+          
+          <div class="dados">
+            <div class="info">
+              <h4>
+                125 Avaliações
+              </h4>
+              <img src="/css/imagens/stars 5.svg" alt="Estrelas">
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Infláveis
-                </label>
-              </div>
+            
+            <div class="title">
+              <h3>
+                Mesa de Totó
+              </h3>
+              <h4>
+                Brinq+
+              </h4>
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              
-              </div>
+            
+            <div class="preco">
+              <h2>
+                R$250,00
+              </h2>
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Hockey Air
-                </label>
-              </div>
+            
+            <div class="forms">
+            
+                <div class="data">
+                  <label>Data</label> <br>
+                  <input type="date" name="data" id="data" placeholder="Data">
+                </div>
+
+                <div class="horas">
+                  <label>Horário</label> <br>
+                  <input type="time" name="horario-inicial" id="horario-inicial" placeholder="De">
+                  <input type="time" name="horario-final" id="horario-final" placeholder="Até">
+                </div>
+            
             </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Touro
-                </label>
+
+              <div class="botoes">
+                <button class="voltar">
+                  <img src="/css/imagens/Back.png">
+                  Voltar
+                </button>
+                <div class="carrinho">
+                  <button>
+                    <img src="/css/imagens/mdi_cart.svg">
+                  </button>
+                </div>
+
+                <input class="pronto" type="submit" name="data" id="data" value="Pronto">
+
               </div>
-            </div>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                  Piscina
-                </label>
-              </div>
-            </div>
-          </div> 
+          </div>
         </div>
+      </div>
 
 
      </body>
