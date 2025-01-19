@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+    <title>Editar Banco</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/editar_banco.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">HOME <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">EXPLORAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">PEDIDOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">MEU CARRINHO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">DÚVIDAS</a>
+            </li>
+            <li class="nav-item dropdown direita">
+              <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+              </a>
+              <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#"> Editar Perfil</a>
+                <a class="dropdown-item" href="#">Sair</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+    <div class="container">
+        <div class="form-title">
+            Editar Dados Bancários
+            <a href="/html/EDITAR LOCADOR.html" type="button">Editar Perfil</a>
+        </div>
+
+        <form>
+            <div class="form-group mb-3">
+                <label for="nome-fantasia">Nome do Titular da conta</label>
+                <input type="text" class="form-control" id="nome-titular" placeholder="DivertFest" name="nome-titular">
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="contato">CPF/CNPJ</label>
+                <input type="text" class="form-control" id="cpf/cnpj" name="cpf/cnpj" value="12.345.678/0001-95" readonly>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="email">Chave Pix</label>
+                <input type="email" class="form-control" id="pix" placeholder="2024000000@gmail.com" name="pix">
+            </div>
+
+
+            <div class="buttons">
+                <button type="button" class="btn btn-cancel">Cancelar</button>
+                <button type="submit" class="btn btn-save">Salvar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+</html>
