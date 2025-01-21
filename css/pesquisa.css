@@ -73,6 +73,7 @@
     cursor: pointer;
 }
 
+
 .lupa {
     width: 20px;
     color: rgba(146, 146, 146, 0.53);
@@ -87,15 +88,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px 0 0 10px ;
+    border-radius: 10px 0 0 0px ;
 
 }
 
 .input-group {
-    margin-top: 70px;
+    margin-top: 62.25px;
     margin-left: 7.5%;
     margin-bottom: 0px;
-    width: 85%;
+    width: 1161.09px;
     color: rgba(146, 146, 146, 0.53);
     font-family: Epilogue;
     font-size: 20px;
@@ -107,7 +108,7 @@
 }
 
 .input-group input {
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     border: 0.5px solid rgba(45, 62, 80, 0.20);
     background: rgba(45, 62, 80, 0.15);
     border-left: 0px;
@@ -115,10 +116,135 @@
 }
 
 .filtros {
-    width: 84%;
+    width: 1161.09px;
     margin-left: 7.5%;
     background-color: #D9D9D9;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    border-radius: 0px 0px 10px 10px;
+    padding: 9px;
+    gap: 114px;
+    align-items: baseline;
+}
+
+.filtros h2 {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+
+.dropdown-oi a {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 26.56px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.dropdown-oi .dropdown-menu {
+    background-color: #D9D9D9;
+    padding: 10px;
+}
+
+.dropdown-oi label {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 16.6px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.nomes {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    gap:197px
+}
+
+.produtos {
+    padding-top: 31.54px;
+    padding-left: 20px;
+    display: flex;
+    gap: 26.04px 31.54px;
+    flex-wrap: wrap;
+    padding-bottom: 31.54px;
+}
+
+.bloquinho {
+    width: 419.43px;
+    height: 151.06px;
+    border-radius: 13px;
+    background: rgba(45, 62, 80, 0.10);
+    padding: 18px;
+    display: flex;
+}
+
+.img-bloquinho {
+    width: 180.42px;
+    height: 121.18px;
+    flex-shrink: 0;
+    border-radius: 15.562px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.dados-bloquinho {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    column-gap: 20px;
+}
+
+.títulos h6 {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 16.6px;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 0px; /* 0% */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.títulos p {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 13.28px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 0px; /* 0% */
+    text-transform: uppercase;
+    margin-top: 8px;
+}
+
+.info-inferior {
+    display: flex;
+    margin-top: 40px;
+    align-items: flex-end;
+    gap: 40px;
+}
+
+.info-inferior h5 {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 19.92px;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.prox {
+    width: 29.88px;
+    height: 29.88px;
+    margin-bottom: .5rem;
 }
