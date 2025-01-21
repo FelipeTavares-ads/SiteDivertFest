@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Carrinho</title>
+  <link rel="stylesheet" href="/css/pagamento.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="logo">
+      <img src="logo.png" alt="Logo Divert Fest">
+    </div>
+    <nav class="menu">
+      <a href="">Home</a>
+      <a href="">Explorar</a>
+      <a href="">Pedidos</a>
+      <a href="">Meu Carrinho</a>
+      <a href="">Dúvidas</a>
+      <a href=""><img src="perfil.png" alt="perfil" class="perfil"></a>
+    </nav>
+  </header>
+
+  <main class="conteudo">
+    <div class="caminho">
+      <a href=""><img src="home.png" alt="home"></a>
+      <img src="setadireita.png" alt="setinha">
+      <h1>MEU CARRINHO</h1>
+      <img src="setadireita.png" alt="setinha">
+      <h1>PAGAMENTO</h1>
+      <a href=""><img src="carrinho.jpg" alt="carrinho"></a>
+
+    </div>
+    <div class="item-carrinho">
+      <div>
+        <img src="mesa de toto.png" alt="toto" width="117px" height="67px">
+      </div>
+      <div class="detalhes-item">
+        <h2 id="titulo-item">Mesa de Totó</h2>
+        <p id="subtitulo-item">Brinq+</p>
+        <p id="data-reserva">Data da Reserva: 26/08/2024 | 08:00h - 19:00h</p>
+      </div>
+      <div id="preco-item">
+        <p>R$225,00</p>
+      </div>
+    </div>
+    <div class="container-endereco">
+      <h2 class="titulo">ENDEREÇO</h2>
+      <form class="formulario-endereco">
+          <div class="linha">
+              <input type="text" class="campo cidade" placeholder="Cidade">
+              <input type="text" class="campo cep" placeholder="CEP">
+              <input type="text" class="campo bairro" placeholder="Bairro">
+          </div>
+          <div class="linha">
+              <input type="text" class="campo rua" placeholder="Rua">
+              <input type="text" class="campo numero" placeholder="Número">
+              <input type="text" class="campo complemento" placeholder="Complemento">
+          </div>
+      </form>
+      <p class="observacao">Obs: A entrega fica combinada com o locatário</p>
+  </div>
+  <div class="container-pagamento">
+        <h2 class="titulopg">MÉTODO DE PAGAMENTO</h2>
+        <form class="formulario-pagamento">
+            <label class="opcao">
+                <input type="checkbox" class="checkbox">
+                PIX
+            </label>
+        </form>
+    </div>
+    <div class="confirmaçao">
+      <h1  id="total">TOTAL: 1 ITEM</h1>
+      <button id="botaoconfirmar">CONFIRMAR</button>
+    </div>
+  </main>
+</body>
+</html>
