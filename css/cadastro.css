@@ -190,7 +190,7 @@
 
   [type="password"] {
     margin-bottom: 5px;
-    width: var(--larguraformmedium);
+    width: var(--larguraform);
     height: var(--alturaform);
     flex-shrink: 0;
     border-radius: 10px;

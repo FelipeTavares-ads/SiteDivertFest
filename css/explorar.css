@@ -85,6 +85,7 @@
     background: rgba(45, 62, 80, 0.15);
     box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25);
     width: 40px;
+    height: 38px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,11 +93,26 @@
 
 }
 
+.title-search {
+    display: flex;
+    margin-left: 67.89px;
+    margin-top: 56.44px;
+    gap: 485.46px;
+}
+
+.title-search h2 {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 33.2px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
 .input-group {
-    margin-top: 62.25px;
-    margin-left: 7.5%;
     margin-bottom: 0px;
-    width: 1161.09px;
+    width: 318.06px;
     color: rgba(146, 146, 146, 0.53);
     font-family: Epilogue;
     font-size: 20px;
@@ -104,72 +120,13 @@
     font-weight: 400;
     line-height: normal;
     text-transform: uppercase;
-    box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25);
 }
 
 .input-group input {
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 10px;
     border: 0.5px solid rgba(45, 62, 80, 0.20);
     background: rgba(45, 62, 80, 0.15);
-    border-left: 0px;
-    border-right: 0px;
-}
-
-.filtros {
-    width: 1161.09px;
-    margin-left: 7.5%;
-    background-color: #D9D9D9;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    border-radius: 0px 0px 10px 10px;
-    padding: 9px;
-    gap: 114px;
-    align-items: baseline;
-}
-
-.filtros h2 {
-    color: #000;
-    font-family: Epilogue;
-    font-size: 34px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    text-transform: uppercase;
-    margin-bottom: 0px;
-}
-
-
-.dropdown-oi a {
-    color: #000;
-    font-family: Epilogue;
-    font-size: 26.56px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.dropdown-oi .dropdown-menu {
-    background-color: #D9D9D9;
-    padding: 10px;
-}
-
-.dropdown-oi label {
-    color: #000;
-    font-family: Epilogue;
-    font-size: 16.6px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
-    text-transform: uppercase;
-}
-
-.nomes {
-    display: flex;
-    flex-direction: row;
-    margin-left: 30px;
-    gap:197px
+    box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25);
 }
 
 .produtos {
@@ -247,4 +204,59 @@
     width: 29.88px;
     height: 29.88px;
     margin-bottom: .5rem;
+}
+
+.img-card {
+    height: 300px;
+    border-radius: 32px;
+    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    gap: 140px;
+    align-items: flex-start;
+}
+
+.card-title {
+    margin-top: 15px;
+    color: #000;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-text-stroke-width: 0.30000001192092896;
+    -webkit-text-stroke-color: #000;
+    font-family: Epilogue;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.info {
+    color: #000;
+    font-family: Epilogue;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.card-price {
+    color: #000;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-top: 10px;
 }

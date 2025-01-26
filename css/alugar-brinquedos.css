@@ -30,10 +30,11 @@
     line-height: normal;
     cursor: pointer;
     padding-top: 16px;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {
-    color: #2c2b2b;
+    color: #5b5b5f;
 }
 
 #navbarDropdownMenuLink {
