@@ -71,7 +71,7 @@
     margin: 0px 30px 15px 30px;
   }
 
-  .conteudo-cadastro-amarelo button{
+  .botao{
     flex-shrink: 0;
     border-radius: 20px;
     border: 3px solid #FFF;
@@ -83,7 +83,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 120px;
+    text-decoration: none;
+  }
+
+  .botao:hover{
+    color: #FEC95A;
+    background-color: #fff;
   }
 
   .header-back{
@@ -306,11 +311,14 @@
     margin-top: 4px;
   }
 
-  .botao button{
+  .botao-pronto{
+    margin-top: 18px;
+
+  }
+
+  .botao-pronto a {
     border-radius: 50px;
     background: #FEC95A;
-    width: 166.95px;
-    height: 42.875px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
@@ -318,6 +326,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding: 10px 20px;
     border-color: #FFCB59;
     margin-top: 15px;
+    text-decoration: none;
   }

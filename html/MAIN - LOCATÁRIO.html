@@ -84,43 +84,7 @@
             cursor: pointer;
         }
 
-        .top-right-buttons {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-
-        .top-right-buttons button {
-            margin-left: 5px;
-            font-size: 25px;
-            font-weight: 700;
-            color: white;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .top-right-buttons button:hover {
-            color: black;
-        }
-
-        .top-right-buttons button:active {
-            color: black;
-        }
-
-        .btn-outline-light {
-            border: 2px solid white;
-            font-size: 25px;
-            font-weight: 700;
-            color: white;
-            background-color: transparent;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-
         .banner {
-            position: relative;
             text-align: center;
             color: white;
             background-color: transparent;
@@ -128,7 +92,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1;
         }
 
         /* Camada de sombreamento sobre a imagem */
@@ -218,10 +181,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link" href="/html/MAIN - LOCADOR.html">HOME </a>
+              <a class="nav-link" href="/html/MAIN - LOCATÁRIO.html">HOME </a> <span class="sr-only">(Página atual)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/html/Explorar - locador.html">EXPLORAR</a> <span class="sr-only">(Página atual)</span></a>
+              <a class="nav-link" href="/html/Explorar - locatário.html">EXPLORAR</a> 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
@@ -230,14 +193,14 @@
               <a class="nav-link" href="/html/agendamento.html">agendamento</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/html/DUVIDAS.html">DÚVIDAS</a>
+              <a class="nav-link" href="/html/DUVIDAS - LOCATARIO.html">DÚVIDAS</a>
             </li>
             <li class="nav-item dropdown direita">
               <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
               </a>
               <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/html/EDITAR LOCADOR.html"> Editar Perfil</a>
+                <a class="dropdown-item" href="/html/EDITAR LOCATARIO.html"> Editar Perfil</a>
                 <a class="dropdown-item" href="/html/PRIMEIRA TELA.html">Sair</a>
               </div>
             </li>
@@ -268,7 +231,7 @@
     </section>
 
     <footer>
-        <button class="btn">Saiba mais</button>
+        <a href="DUVIDAS - LOCATARIO.html" class="btn">Saiba mais</a>
     </footer>
 </body>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

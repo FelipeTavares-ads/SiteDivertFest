@@ -77,6 +77,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-decoration: none;
+  }
+
+  .botao:hover{
+    color: #FEC95A;
+    background-color: #fff;
   }
 
   .header-back{

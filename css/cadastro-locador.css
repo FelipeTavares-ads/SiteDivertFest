@@ -71,7 +71,7 @@
     margin: 0px 30px 15px 30px;
   }
 
-  .conteudo-cadastro-amarelo button{
+  .botao{
     flex-shrink: 0;
     border-radius: 20px;
     border: 3px solid #FFF;
@@ -83,27 +83,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    width: 120px;
-    cursor: pointer;
-  
+    text-decoration: none;
   }
 
-  .conteudo-cadastro-amarelo button:hover{
-    flex-shrink: 0;
-    border-radius: 20px;
-    border: 3px solid #FFF;
-    box-shadow: inset;
-    padding: 0.4rem;
-    background-color: #FFF;
+  .botao:hover{
     color: #FEC95A;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    width: 120px;
-    cursor: pointer;
-    box-shadow: 0px 1.8px 1.8px 0px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
   }
 
   .header-back{
@@ -361,11 +346,14 @@
     margin-top: 4px;
   }
 
-  .botao button{
+  .botao-pronto{
+    margin-top: 13px;
+
+  }
+
+  .botao-pronto a {
     border-radius: 50px;
     background: #FEC95A;
-    width: 166.95px;
-    height: 42.875px;
     flex-shrink: 0;
     color: #FFF;
     font-family: Inter;
@@ -373,7 +361,8 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding: 10px 20px;
     border-color: #FFCB59;
     margin-top: 15px;
-    cursor: pointer;
+    text-decoration: none;
   }
