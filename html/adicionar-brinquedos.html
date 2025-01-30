@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+    <title>Adicionar Brinquedo</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+
+        /* Aplica a fonte Inter para todos os elementos */
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color:  #f5f5f5;
+        }
+
+        .breadcrumb {
+            background-color: #f5f5f5;
+            margin-bottom: 5px;
+            margin: 10px 0px 10px 0px;
+            color: #000;
+            font-family: Epilogue;
+            font-size: 24px;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+
+        .breadcrumb a {
+            color: #000;
+        }
+
+        .breadcrumb-item.active {
+            color: #000;
+        }
+
+        .home{
+            width: 24px;
+        }
+
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        .top-right-buttons button {
+            margin-left: 5px;
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .top-right-buttons button:hover {
+            color: black;
+        }
+
+        .top-right-buttons button:active {
+            color: black;
+        }
+
+        .btn-outline-light {
+            border: 2px solid white;
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+            background-color: transparent;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 150px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin-bottom: 40px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+        }
+
+        .image-upload {
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block; /* Tornando a imagem e os status lado a lado */
+            margin-right: 40px; /* Aumenta o espaço para a direita */
+        }
+
+        .image-upload input {
+            display: none;
+        }
+
+        .image-upload label {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 24px; /* Fonte aumentada */
+            color: #666;
+            position: relative;
+            border: 4px solid #333; /* Borda cinza escuro de 4px */
+        }
+
+        /* Caixa sombreada atrás do texto */
+        .image-upload label::before {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        .status-options {
+            display: inline-block; /* Colocando os status ao lado */
+            vertical-align: top;
+            margin-top: 20px;
+            margin-left: 30px; /* Aumentando o deslocamento para a direita */
+        }
+
+        .status-options label {
+            font-size: 22px; /* Aumento do tamanho da fonte */
+            font-weight: bold; /* Negrito */
+        }
+
+        .status-options div {
+            margin-bottom: 10px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .btn-custom {
+            padding: 10px 30px;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .btn-back {
+            background-color: #999;
+        }
+
+        .btn-back:hover {
+            background-color: #777;
+        }
+
+        .btn-create {
+            background-color: #28a745;
+        }
+
+        .btn-create:hover {
+            background-color: #218838;
+        }
+
+        .gray-box {
+            background-color: #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar{
+            background-color: var(--Botes, #FEC95A);
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+            display: flex;
+            align-items: center;
+        }
+
+        .collapse {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .nav-link {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+            padding-top: 16px;
+        }
+
+        .nav-link:hover {
+            color: #5b5b5f;
+        }
+
+        #navbarDropdownMenuLink {
+            padding-top: 14px;
+        }
+        
+        .logo {
+            width: 60px;    
+        }
+
+        .perfil {
+            width: 30px;
+        }
+
+        .direita {
+            right: 0;
+            left: auto;
+        }
+
+        .sair {
+            width: 20px;
+            padding: 0px;
+        }
+
+        .dropdown-menu {
+            background-color: var(--Botes, #FEC95A);
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .dropdown-menu a {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/html/main-locador.html">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/agendamento.html">Agendamento <span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
+            </li>
+            <li class="nav-item dropdown direita">
+              <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+              </a>
+              <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
+                <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/html/MAIN - LOCADOR.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+          <li class="breadcrumb-item"><a href="/html/gestao.html">Gestão</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Adicionar Brinquedo</li>
+        </ol>
+      </nav>
+
+    <div class="container">
+
+        <div class="gray-box">
+            <div style="display: flex; align-items: center;">
+                <div class="image-upload">
+                    <label for="upload-image">
+                        <span>Adicionar imagem</span>
+                    </label>
+                    <input type="file" id="upload-image" accept="image/*">
+                </div>
+
+                <div class="status-options">
+                    <label>Status:</label>
+                    <div>
+                        <input type="checkbox" id="available" name="status" value="disponivel">
+                        <label for="available">Disponível</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="maintenance" name="status" value="em_manutencao">
+                        <label for="maintenance">Em Manutenção</label>
+                    </div>
+                </div>
+            </div>
+
+            <form>
+                <div class="form-group mb-3">
+                    <label for="product-name">Nome do Produto</label>
+                    <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto">
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="description">Descrição</label>
+                    <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição"></textarea>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="price">Preço por Hora</label>
+                    <input type="number" class="form-control" id="price" placeholder="Digite o preço por hora">
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" class="btn-custom btn-back">Voltar</button>
+                    <button type="submit" class="btn-custom btn-create">Criar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+
+</html>
+
+

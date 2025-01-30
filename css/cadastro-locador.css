@@ -104,8 +104,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-top: 10%;
-    
+    padding-top: 10%;    
   }
 
 
@@ -231,7 +230,43 @@
     padding-left: 8px;
   }
 
-  [type="text"] {
+  [name = "nome"] {
+    margin-bottom: 5px;
+    width: var(--larguraformmedium);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [name = "nomefantasia"] {
+    margin-bottom: 5px;
+    width: var(--larguraformmedium);
+    height: var(--alturaform);
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(45, 62, 80, 0.10);
+    color: rgba(45, 62, 80, 0.90);
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 0px;
+    padding: 2px;
+    padding-left: 8px;
+  }
+
+  [name = "endereco"] {
     margin-bottom: 5px;
     width: var(--larguraform);
     height: var(--alturaform);
@@ -303,6 +338,7 @@
     font-weight: 700;
     line-height: normal;
     justify-content: center;
+    display: grid;
   }
 
   .check p {
@@ -314,10 +350,9 @@
   }
 
   .botao-pronto{
-    margin-top: 18px;
+    margin-top: 13px;
     justify-content: center;
     display: grid;
-
   }
 
   .botao-pronto button {

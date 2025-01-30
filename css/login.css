@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -21,13 +22,14 @@
 
   .conteudo{
     display: flex;
-    width: 1200px;
-    height: 650px;
+    width: 1100px;
+    height: 600px;
     flex-shrink: 0;
     justify-content: flex-start;
     align-items: center;
     border-radius: 35px;
     background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     
   }
 
@@ -76,6 +78,12 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    text-decoration: none;
+  }
+
+  .botao:hover{
+    color: #FEC95A;
+    background-color: #fff;
   }
 
   .header-back{
@@ -127,6 +135,10 @@
   .container{
     width: 98%;
     height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .titulo-login{
@@ -134,6 +146,7 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+    width: 87%;
   }
 
   .titulo-login h2{
@@ -188,6 +201,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+    width: 78%;
   }
 
 
@@ -215,6 +229,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    padding-right: 50%;
   }
   
   .formularios{
@@ -224,12 +239,29 @@
     width: 90%;
   }
 
+  .email{
+    display: flex;
+    align-items: flex-start;
+
+  }
+
+  .senha{
+    display: flex;
+    align-items: flex-start;
+  }
+
   .icone-mail{
-    width: 44px;
+    width: 34px;
     flex-shrink: 0;
+    margin: 8px;
+    margin-top: 10px;
+    padding-top: 5px;
   }
 
   .icone-cadeado{
-    width: 44px;
+    width: 34px;
     flex-shrink: 0;
+    margin: 8px;
+    margin-top: 10px;
+    padding-top: 5px;
   }

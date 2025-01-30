@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter,Epilogue;
+}
+
+.cabecalho {
+  background-color: #fec95a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo img {
+  width: 107px;
+  height: 68px;
+}
+.perfil{
+  width: 63px;
+  height: 59px;
+  margin-top: 10px;
+}
+.menu a {
+  text-decoration: none;
+  list-style: none;
+  color:#ffffff;
+  margin: 0 10px;
+  font-family: Inter;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  
+}
+.conteudo {
+  padding: 20px; 
+}
+
+.caminho {
+  margin-top: 50px;
+  margin-left:0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: #000;
+  font-family: Epilogue;
+}
+
+.item-carrinho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  background: rgba(45, 62, 80, 0.10);
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25), 4px -1px 4.6px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px;
+  width: 1465px;
+  height: 79px;
+  margin-top: 40px;
+  text-align: left;
+}
+.detalhes-item{
+  text-align: left;
+  justify-content: flex-start;
+}
+#preco-item {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  color: #000;
+  font-family: Epilogue;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.container-endereco {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgba(45, 62, 80, 0.10);
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25), 4px -1px 4.6px 0px rgba(0, 0, 0, 0.25);
+  width: 1465px;
+}
+
+#titulo {
+  font-size: 18px;
+  margin-bottom: 1000px;
+  font-family: Epilogue;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; 
+  text-transform: uppercase;
+}
+
+.formulario-endereco {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.linha {
+  display: flex;
+  gap: 10px;
+  
+}
+.campo {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+.campo::placeholder {
+  color: #929292;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.observacao {
+  color: #000;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: 10px;
+  text-align: right;
+}
+.campo{
+  border-radius: 10px;
+  background: rgba(45, 62, 80, 0.20);
+}
+.text{
+  color: #929292;
+}
+.container-pagamento {
+  background-color: #d1d5da;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25), 4px -1px 4.6px 0px rgba(0, 0, 0, 0.25);
+  width: 1465px;
+  margin-top: 18px;
+}
+
+.titulo {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.formulario-pagamento {
+  margin-top: 30px;
+}
+
+.opcao {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #000;
+}
+
+.checkbox {
+  margin-right: 8px;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.total {
+  font-size: 14px;
+  color: #000;
+}
+
+.confirmaçao{
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  gap: 15px;
+  margin-top: 25px;
+}
+#botaoconfirmar {
+  width: 204px;
+  height: 38px;
+  border-radius: 7px;
+  margin-right: 11px;
+  background: #FEC95A;
+  border: none;
+  color: #000;
+  font-family: Epilogue;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; 
+  text-transform: uppercase;
+  margin-right: 25px;
+}
+#total{
+  color: #000;
+  font-family: Epilogue;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; 
+  text-transform: uppercase;
+  margin-top: 25px;
+}
