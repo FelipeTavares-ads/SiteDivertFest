@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
     <link rel="stylesheet" href="/css/Pedidos.css">
+    <script type="module">
+        import { logout } from '/js/auth.js';
+        window.logout = logout; 
+
+        // Verifica se o usuário está logado
+        const token = localStorage.getItem("bearerToken");
+        if (!token) {
+            window.location.href = "/html/login.html";  // Redireciona para a página de login
+        }
+    </script>
 </head>
 
 <body>
