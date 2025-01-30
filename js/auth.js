@@ -97,6 +97,7 @@ async function cadastraLocador(razaoSocial, documento, nomeFantasia, celular, en
     }
 }
 
+
 document.getElementById("form-login")?.addEventListener("submit", function (event) {
     event.preventDefault();
     const email = document.getElementById("usuario").value;
