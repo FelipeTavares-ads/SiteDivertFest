@@ -267,6 +267,16 @@
             cursor: pointer;
         }
     </style>
+    <script type="module">
+        import { logout } from '/js/auth.js';
+        window.logout = logout; 
+
+        // Verifica se o usuário está logado
+        const token = localStorage.getItem("bearerToken");
+        if (!token) {
+            window.location.href = "/html/login.html";  // Redireciona para a página de login
+        }
+    </script>
 </head>
 
 <body>
