@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="\css\explorar.css">
+    <title>Divert Fest</title>
+    <script>
+      //verifica se o usuário está logado
+     const token = localStorage.getItem("bearerToken");
+     if (!token) {
+      window.location.href = "/html/login.html";  // Redireciona para a página de login
+  }
+  </script>
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/html/main-locatario.html">HOME </a> <span class="sr-only">(Página atual)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/explorar-locatario.html">EXPLORAR</a> 
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/agendamento.html">agendamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/duvidas-locatario.html">DÚVIDAS</a>
+          </li>
+          <li class="nav-item dropdown direita">
+            <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+            </a>
+            <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/html/editar-locatario.html"> Editar Perfil</a>
+              <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+      <div class="title-search">
+        <h2>
+          Produtos em Destaque
+        </h2>
+        <div class="input-group">
+          <div class="icon-lupa">
+            <img class="lupa" src="/css/imagens/lupa.png">
+          </div>
+          <input type="text" class="form-control" placeholder=  "BUSQUE O QUE DESEJA" aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
+        </div>
+      </div>
+
+      <div class="container">
+        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class="img-card" src="/css/imagens/Piscina-de-bolinhas.jpg">
+                                    <h5 class="card-title">Piscina de Bolinhas</h5>
+                                    <div class="info">
+                                      <p class="card-text">PLAYKIDS</p>
+                                      <p class="card-price">R$100,00</p>
+                                    </div>
+                                    <a class="detalhes" href="#">+ VER MAIS DETALHES</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class="img-card" src="/css/imagens/toto-1.jpg">
+                                    <h5 class="card-title">MEsa de totó</h5>
+                                    <div class="info">
+                                      <p class="card-text">Brinq+</p>
+                                      <p class="card-price">R$250,00</p>
+                                    </div>
+                                    <a class="detalhes" href="/html/alugar-brinquedos.html">+ VER MAIS DETALHES</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class="img-card" src="/css/imagens/pula-pula-1.jpeg">
+                                    <h5 class="card-title">Pula-Pula</h5>
+                                    <div class="info">
+                                      <p class="card-text">Carlinhos</p>
+                                      <p class="card-price">R$100,00</p>
+                                    </div>
+                                    <a class="detalhes" href="#">+ VER MAIS DETALHES</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img class="img-card" src="/css/imagens/Touro-1.jpg">
+                                    <h5 class="card-title">Touro Mecânico</h5>
+                                    <div class="info">
+                                      <p class="card-text">Easytoys</p>
+                                      <p class="card-price">R$150,00</p>
+                                    </div>
+                                    <a class="detalhes" href="#">+ VER MAIS DETALHES</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles do Carousel -->
+            <!-- Botão Anterior -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true" style="color: black; font-size: 3rem;">&#8249;</span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <!-- Botão Próximo -->
+            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true" style="color: black; font-size: 3rem;">&#8250;</span>
+              <span class="visually-hidden">Próximo</span>
+            </button>
+
+        </div>
+      </div>
+
+        <div class="produtos">
+          <div class="bloquinho">
+            <img class="img-bloquinho" src="/css/imagens/inf.jpg" alt="Inflável">
+            <div class="dados-bloquinho">
+              <div class="títulos">
+                <h6>
+                  Pula Pula Inflável
+                </h6>
+                <p>
+                  Tati Tati
+                </p>
+              </div>
+              <div class="info-inferior">
+                <h5>
+                  R$235,00
+                </h5>
+                <a href="#"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloquinho">
+            <img class="img-bloquinho" src="/css/imagens/hockey-air-1.jpg" alt="Inflável">
+            <div class="dados-bloquinho">
+              <div class="títulos">
+                <h6>
+                  Hockey Air
+                </h6>
+                <p>
+                  EasyToys
+                </p>
+              </div>
+              <div class="info-inferior">
+                <h5>
+                  R$180,00
+                </h5>
+                <a href="#"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bloquinho">
+            <img class="img-bloquinho" src="/css/imagens/futebol-sabao-1.jfif" alt="Inflável">
+            <div class="dados-bloquinho">
+              <div class="títulos">
+                <h6>
+                  Castelo Infl.
+                </h6>
+                <p>
+                  Brinq+
+                </p>
+              </div>
+              <div class="info-inferior">
+                <h5>
+                  R$100,00
+                </h5>
+                <a href="#"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
+              </div>
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+     </body>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
+</html>

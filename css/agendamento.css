@@ -1,0 +1,227 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kreon:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    box-sizing: border-box
+  }
+
+body {
+    background-color: #fff;
+  }
+  
+  .navbar{
+    background-color: var(--Botes, #FEC95A);
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    align-items: center;
+}
+
+.collapse {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-link {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+    padding-top: 16px;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: #5b5b5f;
+}
+
+#navbarDropdownMenuLink {
+    padding-top: 14px;
+}
+ 
+.logo {
+    width: 60px;    
+}
+
+.perfil {
+    width: 30px;
+}
+
+.direita {
+    right: 0;
+    left: auto;
+}
+
+.sair {
+    width: 20px;
+    padding: 0px;
+}
+
+.dropdown-menu {
+    background-color: var(--Botes, #FEC95A);
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dropdown-menu a {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  margin-bottom: 5px;
+  margin: 10px 0px 10px 0px;
+  color: #000;
+  font-family: Epilogue;
+  font-size: 24px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.breadcrumb a {
+  color: #000;
+}
+
+.breadcrumb-item.active {
+  color: #000;
+}
+
+.home{
+  width: 24px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background: rgba(45, 62, 80, 0.10);
+    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25), 4px -1px 4.6px 0px rgba(0, 0, 0, 0.25);
+    padding: 17.8px;
+    height: 207px;
+    margin-top: 40px;
+    text-align: left;
+    width: 1242.48px;
+    margin-left: 34.44px;
+
+}
+
+.img-item {
+  border-radius: 24px;
+  background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+  backdrop-filter: blur(2px);
+  width: 200px;
+  height: 170px;
+}
+
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 15px;
+  column-gap: 20px;
+}
+
+.preco {
+  display: flex;
+  margin-left: 40px;
+}
+
+.title {
+  color: #000;
+  font-family: Epilogue;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0px; /* 0% */
+  text-transform: uppercase;
+}
+
+.dados p {
+  color: #000;
+  font-family: Epilogue;
+  font-size: 26px;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-top: 10px;
+
+}
+
+#valor{
+    width: 236px;
+    height: 56px;
+    flex-shrink: 0;   
+    color: #000;
+    font-family: Epilogue;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    display: flex;
+    margin-top: 200px;
+    margin-left: 60px;
+
+}
+
+.detalhes{
+  display: flex;
+  justify-content: end;
+  align-content: center;
+  font-family: Epílogo;
+  align-items: center;
+}
+
+#taxa{
+  color: #000;
+  font-family: Epilogue;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; 
+  text-transform: uppercase;
+  margin-top: 167px;
+  margin-right: 20px;
+}
+#total{
+  color: #000;
+  font-family: Epilogue;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 0px; 
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  margin-right: 2px;
+}
+  
+.confirm-btn {
+  width: 214px;
+  height: 83px;
+  border-radius: 7px;
+  margin-right: 11px;
+  border-radius: 7px;
+  background: #FEC95A;
+  border: none;
+  margin-top: 167px;
+  margin-bottom: 18px;
+  color: #000;
+  font-family: Epilogue;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 0% */
+  text-transform: uppercase;
+}
