@@ -114,7 +114,7 @@ export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco
 
         if (response.ok) {
             alert("Brinquedo cadastrado com sucesso!");
-            // Redirecionar ou atualizar a página conforme necessário
+            limparFormulario();
         } else if (statusCode === 203) {
             alert("Usuário não autenticado, faça login novamente!");
             window.location.href = "/html/login.html"
@@ -125,4 +125,12 @@ export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco
         console.error("Erro ao cadastrar brinquedo: ", error);
         alert("Erro de conexão.");
     }
+}
+
+function limparFormulario() {
+    document.getElementById("product-name").value = ""; // Limpa o campo do nome
+    document.getElementById("category").value = ""; // Limpa o campo da categoria
+    document.getElementById("description").value = ""; // Limpa o campo da descrição
+    document.getElementById("price").value = ""; // Limpa o campo do preço
+    document.getElementById("upload-image").value = ""; // Limpa o campo de upload de imagem
 }
