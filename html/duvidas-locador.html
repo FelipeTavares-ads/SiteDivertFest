@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script type="module">
-        import { logout } from '/js/auth.js';
-        window.logout = logout;
+        //import { logout } from '/js/auth.js';
+        //window.logout = logout;
 
         // Verifica se o usuário está logado
-        const token = localStorage.getItem("bearerToken");
-        if (!token) {
-            window.location.href = "/html/login.html";  // Redireciona para a página de login
-        }
+        //const token = localStorage.getItem("bearerToken");
+        //if (!token) {
+        //    window.location.href = "/html/login.html";  // Redireciona para a página de login
+        //}
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
@@ -39,9 +39,13 @@
             align-items: center;
         }
 
-        .collapse {
+        .collapse-nav {
             display: flex;
             justify-content: flex-end;
+        }
+
+        .collapse {
+            display: flex;
         }
 
         .nav-link {
@@ -141,7 +145,7 @@
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="collapse-nav navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
                     <a class="nav-link" href="/html/main-locador.html">HOME </a>
@@ -153,7 +157,7 @@
                     <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/html/agendamento.html">Agendamento <span class="sr-only">(Página
+                    <a class="nav-link" href="/html/gestao.html">Gestão <span class="sr-only">(Página
                             atual)</span></a>
                 </li>
                 <li class="nav-item">
