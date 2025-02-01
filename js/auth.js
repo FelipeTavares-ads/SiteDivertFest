@@ -1,4 +1,4 @@
-import { autenticarUsuario, cadastraUsuario, cadastraLocador } from './api/api.js';
+import { autenticarUsuario, cadastraUsuario, cadastraLocador, cadastraBrinquedo} from './api/api.js';
 
 export function logout() {
     // Remove o token do localStorage
@@ -57,5 +57,23 @@ document.getElementById("form-cadastro-locador")?.addEventListener("submit", fun
         }
     } else {
         alert("Você precisa concordar com os termos de uso para continuar.");
+    }
+});
+
+//feat: adiciona brinquedo
+document.getElementById("form-cadastro-brinquedo")?.addEventListener("submit", function (event) {
+    event.preventDefault();
+    console.log("evento - submit novo brinquedo");
+    const nomeProduto = document.getElementById("product-name").value.toString();
+    const categoria = document.getElementById("category").value.toString();
+    const descricao = document.getElementById("description").value.toString();
+    const preco = document.getElementById("price").value.toString();
+
+    const token = localStorage.getItem("bearerToken"); // Obtém o token do localStorage
+
+    if (nomeProduto && categoria && descricao && preco && token) {
+        cadastraBrinquedo(nomeProduto, categoria, descricao, preco, token);
+    } else {
+        alert("Preencha todos os campos e verifique se você está logado.");
     }
 });

@@ -1,9 +1,9 @@
 // js/api/api.js
-const API_URL = "http://localhost:8080/divertfest/api/v1/public/";
+const API_URL = "http://localhost:8080/divertfest/api/v1/";
 
 export async function autenticarUsuario(email, senha) {
     try {
-        const response = await fetch(API_URL + "autentica", {
+        const response = await fetch(API_URL + "public/autentica", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -36,7 +36,7 @@ export async function autenticarUsuario(email, senha) {
 
 export async function cadastraUsuario(nomeCompleto, cpf, celular, endereco, email, senha) {
     try {
-        const response = await fetch(API_URL + "locatario", {
+        const response = await fetch(API_URL + "public/locatario", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -47,6 +47,7 @@ export async function cadastraUsuario(nomeCompleto, cpf, celular, endereco, emai
             autenticarUsuario(email, senha);
         } else {
             alert("falha ao realizar cadastro. Verifique os dados e tente novamente.");
+            window.location.href = "/html/login.html"
         }
     } catch (error) {
         console.error("Erro ao cadastrar locatário: ", error);
@@ -56,7 +57,7 @@ export async function cadastraUsuario(nomeCompleto, cpf, celular, endereco, emai
 
 export async function cadastraLocador(razaoSocial, documento, nomeFantasia, celular, endereco, email, senha) {
     try {
-        const response = await fetch(API_URL + "locador", {
+        const response = await fetch(API_URL + "public/locador", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -79,11 +80,49 @@ export async function cadastraLocador(razaoSocial, documento, nomeFantasia, celu
             autenticarUsuario(email, senha);
         } else if (statusCode === 409) {
             alert("Falha ao realizar cadastro. O CPF já está cadastrado.");
+            window.location.href = "/html/login.html"
         } else {
-            alert("Falha ao realizar cadastro. Verifique os dados e tente novamente.");
+            alert("Verifique os dados e tente novamente.");
         }
     } catch (error) {
         console.error("Erro ao cadastrar locador: ", error);
+        alert("Erro de conexão.");
+    }
+}
+
+export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco, token) {
+    try {
+        const response = await fetch("http://localhost:8080/divertfest/api/v1/locador/brinquedos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`,
+                "Access-Control-Allow-Origin": "*"
+            },
+            body: JSON.stringify({
+                nome: nomeProduto,
+                categoria: categoria,
+                descricao: descricao,
+                precoPorHora: preco,
+                imagem: "linkFalso.png"
+            })
+        });
+
+        const statusCode = response.status;
+        console.log(`Código de status: ${statusCode}`);
+        console.log(`Authorization: Bearer ${token}`);
+
+        if (response.ok) {
+            alert("Brinquedo cadastrado com sucesso!");
+            // Redirecionar ou atualizar a página conforme necessário
+        } else if (statusCode === 203) {
+            alert("Usuário não autenticado, faça login novamente!");
+            window.location.href = "/html/login.html"
+        } else {
+            alert("Falha ao cadastrar brinquedo. Verifique os dados e tente novamente.");
+        }
+    } catch (error) {
+        console.error("Erro ao cadastrar brinquedo: ", error);
         alert("Erro de conexão.");
     }
 }

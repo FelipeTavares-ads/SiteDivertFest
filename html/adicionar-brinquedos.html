@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
     <title>Adicionar Brinquedo</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -19,7 +21,7 @@
         }
 
         body {
-            background-color:  #f5f5f5;
+            background-color: #f5f5f5;
         }
 
         .breadcrumb {
@@ -41,7 +43,7 @@
             color: #000;
         }
 
-        .home{
+        .home {
             width: 24px;
         }
 
@@ -111,8 +113,10 @@
             text-align: center;
             margin-bottom: 20px;
             position: relative;
-            display: inline-block; /* Tornando a imagem e os status lado a lado */
-            margin-right: 40px; /* Aumenta o espaço para a direita */
+            display: inline-block;
+            /* Tornando a imagem e os status lado a lado */
+            margin-right: 40px;
+            /* Aumenta o espaço para a direita */
         }
 
         .image-upload input {
@@ -129,10 +133,12 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 24px; /* Fonte aumentada */
+            font-size: 24px;
+            /* Fonte aumentada */
             color: #666;
             position: relative;
-            border: 4px solid #333; /* Borda cinza escuro de 4px */
+            border: 4px solid #333;
+            /* Borda cinza escuro de 4px */
         }
 
         /* Caixa sombreada atrás do texto */
@@ -149,15 +155,19 @@
         }
 
         .status-options {
-            display: inline-block; /* Colocando os status ao lado */
+            display: inline-block;
+            /* Colocando os status ao lado */
             vertical-align: top;
             margin-top: 20px;
-            margin-left: 30px; /* Aumentando o deslocamento para a direita */
+            margin-left: 30px;
+            /* Aumentando o deslocamento para a direita */
         }
 
         .status-options label {
-            font-size: 22px; /* Aumento do tamanho da fonte */
-            font-weight: bold; /* Negrito */
+            font-size: 22px;
+            /* Aumento do tamanho da fonte */
+            font-weight: bold;
+            /* Negrito */
         }
 
         .status-options div {
@@ -203,7 +213,7 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .navbar{
+        .navbar {
             background-color: var(--Botes, #FEC95A);
             filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
             display: flex;
@@ -233,9 +243,9 @@
         #navbarDropdownMenuLink {
             padding-top: 14px;
         }
-        
+
         .logo {
-            width: 60px;    
+            width: 60px;
         }
 
         .perfil {
@@ -269,7 +279,7 @@
     </style>
     <script type="module">
         import { logout } from '/js/auth.js';
-        window.logout = logout; 
+        window.logout = logout;
 
         // Verifica se o usuário está logado
         const token = localStorage.getItem("bearerToken");
@@ -281,47 +291,51 @@
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
+        <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/html/main-locador.html">HOME </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/agendamento.html">Agendamento <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
-            </li>
-            <li class="nav-item dropdown direita">
-              <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
-              </a>
-              <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
-                <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
-              </div>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/html/main-locador.html">HOME </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/pedidos.html">PEDIDOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/agendamento.html">Agendamento <span class="sr-only">(Página
+                            atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
+                </li>
+                <li class="nav-item dropdown direita">
+                    <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+                    </a>
+                    <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
+                        <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
-      <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/html/MAIN - LOCADOR.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
-          <li class="breadcrumb-item"><a href="/html/gestao.html">Gestão</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Adicionar Brinquedo</li>
+            <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home"
+                        src="/css/imagens/Home.png"> </a></li>
+            <li class="breadcrumb-item"><a href="/html/gestao.html">Gestão</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Adicionar Brinquedo</li>
         </ol>
-      </nav>
+    </nav>
 
     <div class="container">
 
@@ -334,28 +348,30 @@
                     <input type="file" id="upload-image" accept="image/*">
                 </div>
 
-                <div class="status-options">
-                    <label>Status:</label>
-                    <div>
-                        <input type="checkbox" id="available" name="status" value="disponivel">
-                        <label for="available">Disponível</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" id="maintenance" name="status" value="em_manutencao">
-                        <label for="maintenance">Em Manutenção</label>
-                    </div>
-                </div>
             </div>
 
-            <form>
+            <form id="form-cadastro-brinquedo">
                 <div class="form-group mb-3">
                     <label for="product-name">Nome do Produto</label>
                     <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto">
                 </div>
 
                 <div class="form-group mb-3">
+                    <label for="category">Categoria</label>
+                    <select class="form-control" id="category">
+                        <option value="">Escolha a categoria</option>
+                        <option value="PRIMEIRA_INFANCIA">Primeira Infância (0-5 anos)</option>
+                        <option value="IDADE_ESCOLAR">Idade Escolar (6-14 anos)</option>
+                        <option value="PRE_ADOLESCENTES">Pré-Adolescentes (11-14 anos)</option>
+                        <option value="JOVENS">Jovens (15-18 anos)</option>
+                        <option value="TODAS_AS_IDADES">Todas as Idades</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
                     <label for="description">Descrição</label>
-                    <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição"></textarea>
+                    <textarea class="form-control" id="description" rows="3"
+                        placeholder="Digite a descrição"></textarea>
                 </div>
 
                 <div class="form-group mb-3">
@@ -371,11 +387,15 @@
         </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 
 </html>
-
-

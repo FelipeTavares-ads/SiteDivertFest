@@ -10,7 +10,7 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="\css\cadastro-locador.css">
     <title>Divert Fest</title>
-    <script src="/js/auth.js" defer></script>
+    <script type="module" src="/js/auth.js" defer></script>
 </head>
 
 <body>
@@ -44,9 +44,9 @@
                         <div class="formularios" id="form-cadastro-locador">
                             <form method="post">
                                 <input type="text" name="nome" id="nome" placeholder="Nome/Razão Social">
-                                <input type="number" name="cpf" id="cpf" placeholder="CPF/CNPJ">
+                                <input type="text" name="cpf" id="cpf" placeholder="CPF/CNPJ">
                                 <input type="text" name="nomefantasia" id="nomefantasia" placeholder="Nome Fantasia">
-                                <input type="number" name="celular" id="celular" placeholder="Celular">
+                                <input type="text" name="celular" id="celular" placeholder="Celular">
                                 <input type="text" name="endereco" id="endereco" placeholder="Endereço Completo">
                                 <input type="email" name="email" id="email" placeholder="E-mail">
                                 <input type="password" name="senha" id="senha" placeholder="Senha">
@@ -56,7 +56,7 @@
                                         Privacidade.</p>
                                 </div>
                                 <div class="botao-pronto">
-                                    <button type="submit">Pronto</button>
+                                    <button type="submit" id="submitCadastroLocador">Pronto</button>
                                 </div>
                             </form>
                         </div>
