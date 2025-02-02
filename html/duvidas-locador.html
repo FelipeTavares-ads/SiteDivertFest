@@ -14,11 +14,6 @@
         import { logout } from '/js/auth.js';
         window.logout = logout;
 
-        // Verifica se o usuário está logado
-        const token = localStorage.getItem("bearerToken");
-        if (!token) {
-            window.location.href = "/html/login.html";  // Redireciona para a página de login
-        }
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
@@ -140,7 +135,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <img class="logo" src="/css/imagens/logo.png" alt="Logo Divert Fest">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
@@ -193,14 +188,14 @@
                 <h2 class="accordion-header" id="headingOne">
                     <button class="accordion-button" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        COMO FUNCIONA O PROCESSO DE ALUGUEL?
+                        COMO PODEO CADASTRAR MEUS BRINQUEDOS?
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        O processo de aluguel funciona de maneira simples e eficiente. Escolha o brinquedo, faça o
-                        pedido e aproveite!
+                        Para cadastrar seus brinquedos, acesse a seção "Gestão", clique em "Cadastrar Brinquedo" e
+                        preencha as informações necessárias.
                     </div>
                 </div>
             </div>
@@ -208,13 +203,14 @@
                 <h2 class="accordion-header" id="headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        COMO É FEITA A ENTREGA E DEVOLUÇÃO DO BRINQUEDO?
+                        COMO FUNCIONA O PAGAMENTO PARA LOCADOR?
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        A entrega e devolução são realizadas por meio de agendamento, garantindo conveniência para você.
+                        O pagamento é repassado ao locador após a confirmação da devolução do brinquedo, conforme as
+                        condições acordadas no contrato de aluguel.
                     </div>
                 </div>
             </div>
@@ -222,13 +218,14 @@
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        O QUE ACONTECE SE O BRINQUEDO FOR DANIFICADO OU PERDIDO?
+                        O QUE FAÇO SE O BRINQUEDO FOR DANIFICADO OU PERDIDO PELO LOCATÁRIO?
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Em caso de danos ou perdas, entre em contato conosco para avaliação e orientações.
+                        Caso o brinquedo seja danificado ou perdido, entre em contato conosco imediatamente para
+                        avaliarmos a situação e fornecer orientações sobre a compensação.
                     </div>
                 </div>
             </div>
@@ -236,13 +233,13 @@
                 <h2 class="accordion-header" id="headingFour">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        COMO FUNCIONA O PAGAMENTO?
+                        COMO FUNCIONA O AGENDAMENTO DE ENTREGA E RETIRADA?
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        O pagamento é feito via pix, assim que feito nós confirmamos o agendamento.
+                        O agendamento é feito e você pode decidir entre deixar o brinquedo no local no horário ou ficar no local e sair quando der o horário.
                     </div>
                 </div>
             </div>
@@ -250,14 +247,14 @@
                 <h2 class="accordion-header" id="headingFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        QUAL É A POLÍTICA DE AVALIAÇÃO E FEEDBACK?
+                        QUAL É A POLÍTICA DE CANCELAMENTO DE RESERVAS?
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Nossa política de feedback é transparente e incentiva avaliações honestas para melhorar nossos
-                        serviços podem ser feito por meio do nosso e-mail.
+                        Se o locatário cancelar a reserva, você será notificado sobre e o
+                        reembolso de acordo com a política estabelecida no contrato de locação.
                     </div>
                 </div>
             </div>
@@ -265,13 +262,14 @@
                 <h2 class="accordion-header" id="headingSix">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                        CONTATAR O SUPORTE
+                        COMO FAÇO PARA RECEBER O PAGAMENTO PELAS MINHAS LOCAÇÕES?
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body">
-                        Para suporte, entre em contato pelo e-mail suporte@empresa.com ou pelo telefone (00) 1234-5678.
+                        O pagamento será transferido para a sua conta bancária após a confirmação de agendamento do
+                        brinquedo.
                     </div>
                 </div>
             </div>

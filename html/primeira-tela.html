@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     
-    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@800&display=swap');
@@ -18,7 +17,7 @@
             margin: 0;
             padding: 0;
             font-family: "Inter";
-            box-sizing: border-box
+            box-sizing: border-box;
         }
 
         .navbar{
@@ -36,7 +35,7 @@
         .nav-link {
             color: #FFF;
             font-family: Inter;
-            font-size: 23px;
+            font-size: 22px; /* Um pouco maior */
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -49,9 +48,8 @@
             color: #5b5b5f;
         }
 
-        
         .logo {
-            width: 80px;    
+            width: 80px;  /* Logo maior */
         }
 
         .perfil {
@@ -67,25 +65,29 @@
             background-image: url('/css/imagens/MENINA.jpg');
             background-size: cover;
             background-position: center;
-            padding: 300px 0; /* Adiciona espaço interno */
+            height: 90vh; /* Aumentado para 90% da altura da tela */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
         }
 
         .text-container {
             font-family: 'Epilogue', sans-serif;
-            font-size: 80px;
+            font-size: 70px; /* Tamanho maior */
             font-style: normal;
             font-weight: 800;
             line-height: normal;
             text-align: center;
             color: #FF7F50;
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 20px;
+            padding: 25px; /* Um pouco maior */
             border-radius: 10px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
 
         .text-container h1 {
-            font-size: 80px;
+            font-size: 70px; /* Tamanho maior */
             color: #FF7F50;
             margin-bottom: 10px;
         }
@@ -96,7 +98,7 @@
 
         .text-container h2 {
             font-family: 'Inter', sans-serif;
-            font-size: 25px;
+            font-size: 26px; /* Aumentado um pouco */
             font-style: normal;
             font-weight: 700;
             color: white;
@@ -105,13 +107,13 @@
 
         .buttons-container .btn-custom {
             display: inline-block;
-            padding: 20px 50px; /* Aumenta o tamanho dos botões */
-            font-size: 22px; /* Fonte maior */
+            padding: 20px 50px; /* Maior padding */
+            font-size: 24px; /* Fonte maior */
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             color: white;
             background-color: #2D3E50;
-            border: 6px solid #FF7F50; /* Borda engrossada para 6px */
+            border: 6px solid #FF7F50; /* Borda maior */
             border-radius: 20px; /* Bordas arredondadas */
             text-align: center;
             text-decoration: none;
@@ -127,50 +129,46 @@
         .log {
             margin-right: 30px;
         }
-        
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
-        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/html/primeira-tela.html">HOME <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/explorar-locatario.html">EXPLORAR</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/duvidas-locatario.html">DÚVIDAS</a>
-            </li>
-            <li class="nav-item log">
-                <a class="nav-link log-0" href="/html/login.html">ENTRAR</a>
-              </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/html/primeira-tela.html">HOME <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/explorar-locatario.html">EXPLORAR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/duvidas-locatario.html">DÚVIDAS</a>
+                </li>
+                <li class="nav-item log">
+                    <a class="nav-link log-0" href="/html/login.html">ENTRAR</a>
+                </li>
+            </ul>
         </div>
-      </nav>
-    
-    
-    
-    <div class="background-section">
-            <div class="text-container">
-                <h1>Seja um <span>Locador</span> ou um <span>Locatário</span></h1>
-                <h2>Se você tem brinquedos para alugar ou está procurando a diversão ideal,</h2>
-                <h2>nós temos o que você precisa.</h2>
+    </nav>
 
-                <div class="buttons-container">
-                    <a href="/html/cadastro-locador.html" class="btn-custom">Tenho brinquedos</a>
-                    <a href="/html/cadastro.html" class="btn-custom">Encontrar brinquedos</a>
-                </div>
+    <div class="background-section">
+        <div class="text-container">
+            <h1>Seja um <span>Locador</span> ou um <span>Locatário</span></h1>
+            <h2>Se você tem brinquedos para alugar ou está procurando a diversão ideal,</h2>
+            <h2>nós temos o que você precisa.</h2>
+
+            <div class="buttons-container">
+                <a href="/html/cadastro-locador.html" class="btn-custom">Tenho brinquedos</a>
+                <a href="/html/cadastro.html" class="btn-custom">Encontrar brinquedos</a>
             </div>
+        </div>
     </div>
 </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
