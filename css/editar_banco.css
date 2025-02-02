@@ -37,6 +37,7 @@ body {
     line-height: normal;
     cursor: pointer;
     padding-top: 16px;
+    text-transform: uppercase;
 }
 
 .nav-link:hover {

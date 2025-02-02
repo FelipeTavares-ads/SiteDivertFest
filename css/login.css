@@ -201,7 +201,6 @@
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-    width: 78%;
   }
 
 
@@ -236,7 +235,9 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 90%;
+    align-items: center;
   }
 
   .email{
