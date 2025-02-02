@@ -3,53 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Carrinho</title>
+  <link rel="stylesheet" href="/css/pagamento.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+  <title>Pagamento</title>
   <link rel="stylesheet" href="/css/pagamento.css">
   <script type="module">
-    import { logout } from '/js/auth.js';
-    window.logout = logout; 
+    //import { logout } from '/js/auth.js';
+    //window.logout = logout; 
 
     // Verifica se o usuário está logado
-    const token = localStorage.getItem("bearerToken");
-    if (!token) {
-        window.location.href = "/html/login.html";  // Redireciona para a página de login
-    }
+    //const token = localStorage.getItem("bearerToken");
+    //if (!token) {
+    //    window.location.href = "/html/login.html";  // Redireciona para a página de login
+    //}
 </script>
 </head>
 
 <body>
-  <header class="cabecalho">
-    <div class="logo">
-      <img src="logo.png" alt="Logo Divert Fest">
+  <nav class="navbar navbar-expand-lg">
+    <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/html/MAIN - LOCATÁRIO.html">HOME </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/Explorar - locatário.html.html">EXPLORAR</a> <span class="sr-only">(Página atual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/agendamento.html">agendamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/html/DUVIDAS - LOCATARIO.html.html">DÚVIDAS</a>
+        </li>
+        <li class="nav-item dropdown direita">
+          <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+          </a>
+          <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/html/EDITAR LOCATARIO.html"> Editar Perfil</a>
+            <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+          </div>
+        </li>
+      </ul>
     </div>
-    <nav class="menu">
-      <a href="">Home</a>
-      <a href="">Explorar</a>
-      <a href="">Pedidos</a>
-      <a href="">Meu Carrinho</a>
-      <a href="">Dúvidas</a>
-      <a href=""><img src="perfil.png" alt="perfil" class="perfil"></a>
     </nav>
-  </header>
+
+
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/html/MAIN - LOCATÁRIO.html.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+        <li class="breadcrumb-item"><a href="/html/agendamento.html">Agendamento</a></li>
+        <li class="breadcrumb-item active" aria-current="page">pagamento</li>
+      </ol>
+    </nav>
+    
+
 
   <main class="conteudo">
-    <div class="caminho">
-      <a href=""><img src="home.png" alt="home"></a>
-      <img src="setadireita.png" alt="setinha">
-      <h1>MEU CARRINHO</h1>
-      <img src="setadireita.png" alt="setinha">
-      <h1>PAGAMENTO</h1>
-      <a href=""><img src="carrinho.jpg" alt="carrinho"></a>
-
-    </div>
     <div class="item-carrinho">
       <div>
-        <img src="mesa de toto.png" alt="toto" width="117px" height="67px">
+        <img src="/css/imagens/toto-1.jpg" alt="toto" height=150px>
       </div>
       <div class="detalhes-item">
         <h2 id="titulo-item">Mesa de Totó</h2>
         <p id="subtitulo-item">Brinq+</p>
-        <p id="data-reserva">Data da Reserva: 26/08/2024 | 08:00h - 19:00h</p>
+        <p id="data-reserva">Data da Reserva: 26/08/2024</p>
+        <p id="data-reserva">Hora da Reserva: 08:00h - 19:00h</p>
       </div>
       <div id="preco-item">
         <p>R$225,00</p>
@@ -80,10 +107,14 @@
             </label>
         </form>
     </div>
+    
+  </main>
     <div class="confirmaçao">
       <h1  id="total">TOTAL: 1 ITEM</h1>
       <button id="botaoconfirmar">CONFIRMAR</button>
     </div>
-  </main>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </html>
