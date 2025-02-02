@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedidos</title>
+    <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/Pedidos.css">
     <script type="module">
         import { logout } from '/js/auth.js';
@@ -18,104 +20,121 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="logo">
-          <img src="logo.png" alt="Logo Divert Fest">
+    <nav class="navbar navbar-expand-lg">
+        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="/html/main-locador.html">HOME </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/pedidos.html">PEDIDOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/gestao.html">gestão<span class="sr-only">(Página atual)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
+            </li>
+            <li class="nav-item dropdown direita">
+              <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+              </a>
+              <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
+                <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+              </div>
+            </li>
+          </ul>
         </div>
-        <nav class="menu">
-          <a href="">Home</a>
-          <a href="">Explorar</a>
-          <a href="">Pedidos</a>
-          <a href="">Meu Carrinho</a>
-          <a href="">Dúvidas</a>
-          <a href=""><img src="perfil.png" alt="perfil" class="perfil"></a>
+      </nav>
+  
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+            <li class="breadcrumb-item active" aria-current="page">Pedidos</li>
+          </ol>
         </nav>
-      </header>
-      <div class="titulo">
-        <a href=""><img src="home.png" alt="home"></a>
-        <img src="setadireita.png" alt="seta">
-        <p id="ped">PEDIDOS</p>
-    </div>
-      </div>
-      <div class="pedido">
-        <img src="mesa de toto.png" alt="Mesa de Totó">
-        <div class="detalhes">
-            <h3>MESA DE TOTÓ<div id="num1">Nº: 6949</div></h3>
-            <p>Locatário: BRINQ+</p>
-            <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
-            <p>Data da Reserva: 26/08/2024 - 08:00h - 19:00h</p>
-        </div>
-        <div class="acoes">
-            <button class="btn-andamento">PEDIDO EM ANDAMENTO</button>
-        </div>
-    </div>
 
-    <div class="pedido">
-        <img src="futebol de sabao.png" alt="Futebol de Sabão">
-        <div class="detalhes">
-            <h3>FUTEBOL DE SABÃO <div><p id="num2">Nº: 5831</p></div></h3>
-            <p>Locatário: EasyToys</p>
-            <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
-            <p>Data da Reserva: 26/08/2024 - 08:00h - 19:00h</p>
-        </div>
-        <div class="acoes">
-            <button class="btn-andamento">PEDIDO EM ANDAMENTO</button>
-        </div>
-    </div>
-
-    <div class="pedido">
-        <img src="piscina de bolinha.png" alt="Piscina de Bolinhas">
-        <div class="detalhes">
-            <h3>PISCINA DE BOLINHAS<div><p id="num3">Nº: 5143</p></div></h3>
-            <p>Locatário: Mundo dos Brinquedos</p>
-            <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
-            <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
-        </div>
-        <div class="acoes">
-            <div class="final">
-                <p id="p1">PEDIDO FINALIZADO</p>
+        <div class="list-pedidos">
+            <div class="pedido">
+                <img src="/css/imagens/toto-1.jpg" alt="Mesa de Totó">
+                <div class="detalhes">
+                    <h3>MESA DE TOTÓ<div id="num1">Nº: 6949</div></h3>
+                    <p>Locatário: BRINQ+</p>
+                    <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
+                    <p>Data da Reserva: 26/08/2024 - 08:00h - 19:00h</p>
+                </div>
+                <div class="acoes">
+                    <button class="btn-andamento">PEDIDO EM ANDAMENTO</button>
+                </div>
             </div>
-        </div>    
-        <div class="acoes">
-            <button id="btn-novo1">PEDIR NOV.</button>
-        </div>
-    </div>
 
-    <div class="pedido">
-        <img src="escorregador inflavel.png" alt="Escorregador Inflável">
-        <div class="detalhes">
-            <h3>ESCORREGADOR INFLÁVEL<div><p id="num4">Nº: 4998</p></div></h3>
-            <p>Locatário: Moreira</p>
-            <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
-            <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
-        </div>
-        <div class="acoes">
-            <div class="final">
-                <p id="p2">PEDIDO FINALIZADO</p>
+            <div class="pedido">
+                <img src="/css/imagens/futebol-sabao-1.jfif" alt="Futebol de Sabão">
+                <div class="detalhes">
+                    <h3>FUTEBOL DE SABÃO <div><p id="num2">Nº: 5831</p></div></h3>
+                    <p>Locatário: EasyToys</p>
+                    <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
+                    <p>Data da Reserva: 26/08/2024 - 08:00h - 19:00h</p>
+                </div>
+                <div class="acoes">
+                    <button class="btn-andamento">PEDIDO EM ANDAMENTO</button>
+                </div>
             </div>
-        </div>    
-        <div class="acoes">
-            <button id="btn-novo2">PEDIR NOV.</button>
-        </div>
-    </div>
 
-    <div class="pedido">
-        <img src="mesa de air hoquei.png" alt="Mesa de Air Hockey">
-        <div class="detalhes">
-            <h3>MESA DE AIR HÓQUEI</h3>
-            <p>Locatário: Kids Party Brinquedos</p>
-            <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
-            <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
-        </div>
-        <div class="acoes">
-            <div class="final">
-                <p id="p3">PEDIDO FINALIZADO</p>
+            <div class="pedido">
+                <img src="/css/imagens/Piscina-de-bolinhas.jpg" alt="Piscina de Bolinhas">
+                <div class="detalhes">
+                    <h3>PISCINA DE BOLINHAS<div><p id="num3">Nº: 5143</p></div></h3>
+                    <p>Locatário: Mundo dos Brinquedos</p>
+                    <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
+                    <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
+                </div>
+                <div class="acoes">
+                    <p>PEDIDO FINALIZADO</p>
+                    <button id="btn-novo">PEDIR NOV.</button>
+                </div>
             </div>
-        </div>    
-        <div class="acoes">
-            <button id="btn-novo3">PEDIR NOV.</button>
+
+            <div class="pedido">
+                <img src="/css/imagens/castelo-bobo.jpg" alt="Escorregador Inflável">
+                <div class="detalhes">
+                    <h3>ESCORREGADOR INFLÁVEL<div><p id="num4">Nº: 4998</p></div></h3>
+                    <p>Locatário: Moreira</p>
+                    <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
+                    <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
+                </div>
+                <div class="acoes">
+                    <p>PEDIDO FINALIZADO</p>
+                    <button id="btn-novo">PEDIR NOV.</button>
+                </div>
+            </div>
+
+            <div class="pedido">
+                <img src="/css/imagens/hockey-air-1.jpg" alt="Mesa de Air Hockey">
+                <div class="detalhes">
+                    <h3>MESA DE AIR HÓQUEI</h3>
+                    <p>Locatário: Kids Party Brinquedos</p>
+                    <p>Endereço: Rua do Mosquito, 69 - Trancoso</p>
+                    <p>Data da Reserva: 24/04/2024 - 16:00h - 20:30h</p>
+                </div>
+                <div class="acoes">
+                    <p>PEDIDO FINALIZADO</p>
+                    <button id="btn-novo">PEDIR NOV.</button>
+                </div>
+            </div>
         </div>
-    </div>
 </main>
 </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+ 
 </html>
