@@ -212,15 +212,15 @@
         <form id="form-cadastro-brinquedo">
             <div class="form-group">
                 <label for="product-name">Nome do Produto</label>
-                <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto">
+                <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto" required>
             </div>
 
             <div class="form-group">
                 <label for="category">Categoria</label>
-                <select class="form-control" id="category">
+                <select class="form-control" id="category" required>
                     <option value="">Escolha a categoria</option>
                     <option value="PRIMEIRA_INFANCIA">Primeira Infância (0-5 anos)</option>
-                    <option value="IDADE_ESCOLAR">Idade Escolar (6-14 anos)</option>
+                    <option value="IDADE_ESCOLAR">Idade Escolar (6-10 anos)</option>
                     <option value="PRE_ADOLESCENTES">Pré-Adolescentes (11-14 anos)</option>
                     <option value="JOVENS">Jovens (15-18 anos)</option>
                     <option value="TODAS_AS_IDADES">Todas as Idades</option>
@@ -229,12 +229,12 @@
 
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição"></textarea>
+                <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição" required></textarea>
             </div>
 
             <div class="form-group">
                 <label for="price">Preço por Hora</label>
-                <input type="number" class="form-control" id="price" placeholder="Digite o preço por hora">
+                <input type="number" class="form-control" id="price" placeholder="Digite o preço por hora" required>
             </div>
 
             <div class="btn-container">
@@ -244,19 +244,7 @@
         </form>
     </div>
 
-    <script>
-        document.getElementById('upload-image').addEventListener('change', function (event) {
-            const preview = document.getElementById('imagePreview');
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    preview.innerHTML = `<img src="${e.target.result}" alt="Prévia da imagem">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-    </script>
+    <script src="/js/cadastroBrinquedo.js" type="module"></script>
 </body>
 
 </html>
