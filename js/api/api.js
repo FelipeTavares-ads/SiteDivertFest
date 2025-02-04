@@ -90,7 +90,7 @@ export async function cadastraLocador(razaoSocial, documento, nomeFantasia, celu
     }
 }
 
-export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco, token) {
+export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco, imagemUrl, token) {
     try {
         const response = await fetch("http://localhost:8080/divertfest/api/v1/locador/brinquedos", {
             method: "POST",
@@ -104,7 +104,7 @@ export async function cadastraBrinquedo(nomeProduto, categoria, descricao, preco
                 categoria: categoria,
                 descricao: descricao,
                 precoPorHora: preco,
-                imagem: "linkFalso.png"
+                imagem: imagemUrl
             })
         });
 
@@ -133,4 +133,47 @@ function limparFormulario() {
     document.getElementById("description").value = ""; // Limpa o campo da descrição
     document.getElementById("price").value = ""; // Limpa o campo do preço
     document.getElementById("upload-image").value = ""; // Limpa o campo de upload de imagem
+}
+
+
+export async function fetchBrinquedos(token) {
+    try {
+        const response = await fetch('http://localhost:8080/divertfest/api/v1/brinquedos', {
+            method: "GET",
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            },
+            credentials: 'include'  // Inclui cookies na requisição
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao buscar brinquedos');
+        }
+
+        const brinquedos = await response.json();
+        return brinquedos;
+    } catch (error) {
+        console.error(error);
+        throw error;
+    }
+}
+
+
+export async function uploadImage(file) {
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const response = await fetch(API_URL + "public/upload/", {
+        method: 'POST',
+        body: formData
+    });
+
+    if (!response.ok) {
+        throw new Error('Erro ao carregar a imagem');
+    }
+
+    // Tratar a resposta como texto simples
+    const imageUrl = await response.text();
+    return imageUrl; // A URL da imagem
 }
