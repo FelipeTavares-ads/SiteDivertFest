@@ -16,8 +16,7 @@
       if (!token) {
           window.location.href = "/html/login.html";  // Redireciona para a página de login
       }
-  </script>
-    
+    </script>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -55,126 +54,23 @@
       </div>
     </nav>
 
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+        <li class="breadcrumb-item active" aria-current="page">Gestão</li>
+      </ol>
+    </nav>
 
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
-          <li class="breadcrumb-item active" aria-current="page">Gestão</li>
-        </ol>
-      </nav>
+    <div class="espaco" id="brinquedosContainer">
+      <!-- Brinquedos serão inseridos aqui dinamicamente -->
+    </div>
 
-      <div class="espaco">
-        <div class="bloco">
-          <div class="img">
-            <img class="img-brinquedo" src="/css/imagens/Piscina-de-bolinhas.jpg" alt="Brinquedo">
-          </div>
-          
-          <div class="dados">
-            <div class="title">
-              <h4>
-                Brinquedo 1
-              </h4>
-              <a class="edit" href="editar-brinquedo.html"> <img src="/css/imagens/pencil-edit-button-svgrepo-com.svg" alt="editar"> </a>
-              <a class="edit" href=""> <img src="/css/imagens/trash-bin-2-svgrepo-com.svg" alt="delete"> </a>
-            </div>
-            
-            <div class="specs">
-              <p><strong>Descrição: </strong>Pula pula, muito querido pelas crianças.</p>
-              <p><strong>Preço: </strong>R$120,00</p>
-              <p><strong>Código: </strong>82645</p>
-        
-            </div>
-            
-            <div class="status">
-              <p>
-                <strong>Status:</strong> DISPONÍVEL
-                <img src="/css/imagens/check-mark-circle-svgrepo-com.svg" alt="check">
-              </p>
-             
-            </div>
-          </div>
-        </div>
+    <footer></footer>
 
-        <div class="bloco">
-          <div class="img">
-            <img class="img-brinquedo" src="/css/imagens/pula-pula-1.jpeg" alt="Brinquedo">
-          </div>
-          
-          <div class="dados">
-            <div class="title">
-              <h4>
-                Brinquedo 2
-              </h4>
-              <a class="edit" href="editar-brinquedo.html"> <img src="/css/imagens/pencil-edit-button-svgrepo-com.svg" alt="editar"> </a>
-              <a class="edit" href=""> <img src="/css/imagens/trash-bin-2-svgrepo-com.svg" alt="delete"> </a>
-            </div>
-            
-            <div class="specs">
-              <p><strong>Descrição: </strong>futebol de sabão</p>
-              <p><strong>Preço: </strong>R$450,00</p>
-              <p><strong>Código: </strong>81145</p>
-        
-            </div>
-            
-            <div class="status">
-              <p>
-                <strong>Status:</strong> DISPONÍVEL
-                <img src="/css/imagens/check-mark-circle-svgrepo-com.svg" alt="check">
-              </p>
-             
-            </div>
-
-              </div>
-          </div>
-
-        <div class="bloco">
-          <div class="img">
-            <img class="img-brinquedo" src="/css/imagens/futebol-sabao-1.jfif" alt="Brinquedo">
-          </div>
-          
-          <div class="dados">
-            <div class="title">
-              <h4>
-                Brinquedo 3
-              </h4>
-              <a class="edit" href="editar-brinquedo.html"> <img src="/css/imagens/pencil-edit-button-svgrepo-com.svg" alt="editar"> </a>
-              <a class="edit" href=""> <img src="/css/imagens/trash-bin-2-svgrepo-com.svg" alt="delete"> </a>
-            </div>
-            
-            <div class="specs">
-              <p><strong>Descrição: </strong>Piscina de Bolinhas</p>
-              <p><strong>Preço: </strong>R$150,00</p>
-              <p><strong>Código: </strong>72645</p>
-        
-            </div>
-            
-            <div class="status">
-              <p>
-                <strong>Status:</strong> EM MANUTENÇÃO
-                <img src="/css/imagens/hourglass-not-done-svgrepo-com.svg" alt="check">
-              </p>
-             
-            </div>
-
-              </div>
-          </div>
-          
-          <div class="bloco-add">
-            <a class="add-a" href="/html/adicionar-brinquedos.html"><img class="add" src="/css/imagens/add-circle-svgrepo-com.svg" alt="adicionar brinquedo"></a>
-          </div>
-
-        </div>
-
-      </div>
-
-      <footer>
-
-      </footer>
-
-
-     </body>
-     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="module"  src="/js/api/api.js"></script>
+    <script type="module" src="/js/gestao.js"></script>
+  </body>
 </html>

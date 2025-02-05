@@ -1,4 +1,3 @@
-// js/api/api.js
 const API_URL = "http://localhost:8080/divertfest/api/v1/";
 
 export async function autenticarUsuario(email, senha) {
@@ -176,4 +175,19 @@ export async function uploadImage(file) {
     // Tratar a resposta como texto simples
     const imageUrl = await response.text();
     return imageUrl; // A URL da imagem
+}
+
+export function fetchBrinquedosGestao(token) {
+    return fetch("http://localhost:8080/divertfest/api/v1/locador/meus-brinquedos", {
+        method: 'GET',
+        headers: {
+            'Authorization': `Bearer ${token}`,
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .catch(error => {
+        console.error('Error fetching brinquedos:', error);
+        throw error;
+    });
 }
