@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
     <title>Editar Perfil</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script type="module">
         import { logout } from '/js/auth.js';
-        window.logout = logout; 
+        window.logout = logout;
 
         // Verifica se o usuário está logado
         const token = localStorage.getItem("bearerToken");
@@ -27,10 +29,10 @@
         }
 
         .body {
-            background-color:   #f5f5f5;
+            background-color: #f5f5f5;
         }
 
-        .navbar{
+        .navbar {
             background-color: var(--Botes, #FEC95A);
             filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
             display: flex;
@@ -61,9 +63,9 @@
         #navbarDropdownMenuLink {
             padding-top: 14px;
         }
-        
+
         .logo {
-            width: 60px;    
+            width: 60px;
         }
 
         .perfil {
@@ -114,19 +116,21 @@
         }
 
         .form-title a {
-        font-size: 16px;
-        background-color: #333; /* Cinza escuro */
-        color: #fff;
-        border: none;
-        padding: 5px 15px;
-        border-radius: 5px;
-        cursor: pointer;
-        text-decoration: none;
-    }
+            font-size: 16px;
+            background-color: #333;
+            /* Cinza escuro */
+            color: #fff;
+            border: none;
+            padding: 5px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-    .form-title a:hover {
-        background-color: #555; /* Cinza médio */
-    }
+        .form-title a:hover {
+            background-color: #555;
+            /* Cinza médio */
+        }
 
         .form-group label {
             font-weight: bold;
@@ -182,39 +186,41 @@
 
 <body>
     <nav class="navbar navbar-expand-lg">
-        <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-          <span class="navbar-toggler-icon"></span>
+        <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="/html/main-locador.html">HOME </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/html/gestao.html">Gestão <span class="sr-only">(Página atual)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/html/reservas.html">Solicitações</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
-            </li>
-            <li class="nav-item dropdown direita">
-              <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
-              </a>
-              <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
-                <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
-              </div>
-            </li>
-          </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/html/main-locador.html">HOME </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/gestao.html">Gestão <span class="sr-only">(Página atual)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/reservas.html">Solicitações</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
+                </li>
+                <li class="nav-item dropdown direita">
+                    <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+                    </a>
+                    <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
+                        <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+                    </div>
+                </li>
+            </ul>
         </div>
-      </nav>
+    </nav>
 
     <div class="container">
         <div class="form-title">
@@ -247,18 +253,26 @@
 
             <div class="form-group mb-3">
                 <label for="endereco">Endereço completo</label>
-                <input type="text" class="form-control" id="endereco" placeholder="Rua das Flores, 123, Bairro Jardim, São Paulo, SP, 01234-567">
+                <input type="text" class="form-control" id="endereco"
+                    placeholder="Rua das Flores, 123, Bairro Jardim, São Paulo, SP, 01234-567">
             </div>
 
             <div class="buttons">
-                <button type="button" class="btn btn-cancel" onclick="window.history.back();">Cancelar</button>
+                <button type="button" class="btn btn-cancel"
+                    onclick="window.location.href='/html/gestao.html'">Cancelar</button>
                 <button type="submit" class="btn btn-save">Salvar</button>
             </div>
         </form>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
- 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </html>

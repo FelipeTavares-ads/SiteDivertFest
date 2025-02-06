@@ -191,3 +191,28 @@ export function fetchBrinquedosGestao(token) {
         throw error;
     });
 }
+
+export async function editaDadosBancarios(token, dados) {
+    const response = await fetch(API_URL+"locador/dados-bancario", {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`,
+            "Access-Control-Allow-Origin": "*"
+        },
+        body: JSON.stringify(dados)
+    });
+
+    const statusCode = response.status;
+    console.log(`Código de status: ${statusCode}`);
+
+    if (response.ok) {
+        alert("Atualização salva!");
+    } else if (statusCode === 203) {
+        alert("Usuário não autenticado, faça login novamente!");
+        window.location.href = "/html/login.html"
+    } else {
+        alert("Falha ao salvar seus dados. Tente novamente mais tarde.");
+    }
+    
+}

@@ -1,4 +1,4 @@
-import { autenticarUsuario, cadastraUsuario, cadastraLocador} from './api/api.js';
+import { autenticarUsuario, cadastraUsuario, cadastraLocador, editaDadosBancarios } from './api/api.js';
 
 export function logout() {
     // Remove o token do localStorage
@@ -60,3 +60,23 @@ document.getElementById("form-cadastro-locador")?.addEventListener("submit", fun
     }
 });
 
+//mandar seus dadoss bancarios
+document.getElementById("btnSalvar")?.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("Clicou no botão Salvar!");
+
+    const token = localStorage.getItem("bearerToken"); // O nome salvo no localStorage
+    const nomeDoTitular = document.getElementById("nomeTitular").value;
+    const chavePix = document.getElementById("pix").value;
+
+    const dados = {
+        dadosBancarios: { nomeDoTitular, chavePix }
+    };
+
+    if (nomeDoTitular && chavePix) {
+        editaDadosBancarios(token, dados);
+    } else {
+        alert("Preencha todos os campos.");
+    }
+
+});
