@@ -25,7 +25,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg">
-    <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+    <img class="logo" src="/css/imagens/logo.png" alt="Logo Divert Fest">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
       aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
@@ -33,27 +33,27 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/html/main-locador.html">HOME </a>
+          <a class="nav-link" href="/html/main-locador.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR<span class="sr-only">(Página atual)</span></a>
+          <a class="nav-link" href="/html/explorar-locador.html">Explorar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/gestao.html">Gestão <span class="sr-only">(Página atual)</span></a>
+          <a class="nav-link" href="/html/gestao.html">Gestão</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/html/reservas.html">Solicitações</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
+          <a class="nav-link" href="/html/duvidas-locador.html">Dúvidas</a>
         </li>
-        <li class="nav-item dropdown direita">
-          <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <img class="perfil" src="/css/imagens/perfil.png" alt="Perfil">
           </a>
-          <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/html/editar-locador.html">Editar Perfil</a>
             <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
           </div>
         </li>
@@ -61,38 +61,42 @@
     </div>
   </nav>
 
+
   <div class="title-search">
     <h2>Produtos em Destaque</h2>
     <div class="input-group">
-        <div class="icon-lupa">
-            <img class="lupa" src="/css/imagens/lupa.png">
-        </div>
-        <input type="text" class="form-control" placeholder="BUSQUE O QUE DESEJA" aria-label="Recipiente para nickname" aria-describedby="basic-addon2">
+      <div class="icon-lupa">
+        <img class="lupa" src="/css/imagens/lupa.png">
+      </div>
+      <input type="text" class="form-control" placeholder="BUSQUE O QUE DESEJA" aria-label="Recipiente para nickname"
+        aria-describedby="basic-addon2">
     </div>
-</div>
+  </div>
 
-<div class="container">
+  <div class="container">
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Slideshow content will be dynamically injected here by JavaScript -->
-        </div>
-        <!-- Controles do Carousel -->
-        <!-- Botão Anterior -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true" style="color: black; font-size: 3rem;">&#8249;</span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <!-- Botão Próximo -->
-        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true" style="color: black; font-size: 3rem;">&#8250;</span>
-            <span class="visually-hidden">Próximo</span>
-        </button>
+      <div class="carousel-inner">
+        <!-- Slideshow content will be dynamically injected here by JavaScript -->
+      </div>
+      <!-- Controles do Carousel -->
+      <!-- Botão Anterior -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          style="color: black; font-size: 3rem;">&#8249;</span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <!-- Botão Próximo -->
+      <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          style="color: black; font-size: 3rem;">&#8250;</span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
     </div>
-</div>
+  </div>
 
-<div class="produtos">
+  <div class="produtos">
     <!-- Product list content will be dynamically injected here by JavaScript -->
-</div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -104,6 +108,6 @@
   integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
   integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  <script src="/js/explorar.js" type="module"></script>
+<script src="/js/explorar.js" type="module"></script>
 
 </html>

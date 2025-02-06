@@ -22,25 +22,46 @@
     justify-content: flex-end;
 }
 
-.nav-link {
-    color: #FFF;
-    font-family: Inter;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    cursor: pointer;
-    padding-top: 16px;
-    text-transform: uppercase;
-}
+.navbar {
+            background-color: #FEC95A;
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
 
-.nav-link:hover {
-    color: #2c2b2b;
-}
+        .navbar .logo {
+            width: 50px;
+            margin-right: 20px;
+        }
 
-#navbarDropdownMenuLink {
-    padding-top: 14px;
-}
+        .navbar-nav {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
+        .nav-link {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            background-color: #F28D38;
+            color: #FFF;
+            border-radius: 4px;
+        }
+
+        .nav-item .perfil {
+            width: 30px;
+            border-radius: 50%;
+        }
+
  
 .logo {
     width: 60px;    

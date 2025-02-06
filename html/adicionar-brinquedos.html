@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
@@ -80,6 +81,24 @@
             font-weight: 700;
             line-height: normal;
             cursor: pointer;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .breadcrumb a {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #FEC95A;
+        }
+
+        .breadcrumb span {
+            color: #333;
         }
 
         .container {
@@ -200,6 +219,16 @@
             </ul>
         </div>
     </nav>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home"
+                        src="/css/imagens/Home.png"> </a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Gestão / Cadastrar Brinquedo</li>
+        </ol>
+    </nav>
+
     <div class="container">
         <div class="title">Adicionar Brinquedo</div>
         <div class="image-upload">
@@ -212,7 +241,8 @@
         <form id="form-cadastro-brinquedo">
             <div class="form-group">
                 <label for="product-name">Nome do Produto</label>
-                <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto" required>
+                <input type="text" class="form-control" id="product-name" placeholder="Digite o nome do produto"
+                    required>
             </div>
 
             <div class="form-group">
@@ -229,7 +259,8 @@
 
             <div class="form-group">
                 <label for="description">Descrição</label>
-                <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição" required></textarea>
+                <textarea class="form-control" id="description" rows="3" placeholder="Digite a descrição"
+                    required></textarea>
             </div>
 
             <div class="form-group">

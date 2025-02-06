@@ -10,110 +10,124 @@
   <link rel="stylesheet" href="/css/pagamento.css">
   <script type="module">
     import { logout } from '/js/auth.js';
-    window.logout = logout; 
+    window.logout = logout;
 
     // Verifica se o usuário está logado
     const token = localStorage.getItem("bearerToken");
     if (!token) {
         window.location.href = "/html/login.html";  // Redireciona para a página de login
     }
-</script>
+
+    // Alerta de confirmação
+    function confirmarPagamento() {
+        alert("Por favor, confirme apenas após realizar o pagamento. Aguarde nossa confirmação.");
+    }
+  </script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg">
-    <img class = "logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+    <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="/html/MAIN - LOCATÁRIO.html">HOME </a>
+          <a class="nav-link" href="/html/main-locador.html">HOME </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/Explorar - locatário.html.html">EXPLORAR</a> <span class="sr-only">(Página atual)</span></a>
+          <a class="nav-link" href="/html/explorar-locador.html">EXPLORAR</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/Pedidos.html">PEDIDOS</a>
+          <a class="nav-link" href="/html/gestao.html">Gestão <span class="sr-only">(Página atual)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/agendamento.html">agendamento</a>
+          <a class="nav-link" href="/html/reservas.html">Solicitações</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/html/DUVIDAS - LOCATARIO.html.html">DÚVIDAS</a>
+          <a class="nav-link" href="/html/duvidas-locador.html">DÚVIDAS</a>
         </li>
         <li class="nav-item dropdown direita">
-          <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
           </a>
           <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/html/EDITAR LOCATARIO.html"> Editar Perfil</a>
+            <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
             <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
           </div>
         </li>
       </ul>
     </div>
-    </nav>
+  </nav>
 
-
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="/html/MAIN - LOCATÁRIO.html.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
-        <li class="breadcrumb-item"><a href="/html/agendamento.html">Agendamento</a></li>
-        <li class="breadcrumb-item active" aria-current="page">pagamento</li>
-      </ol>
-    </nav>
-    
-
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="/html/MAIN - LOCATÁRIO.html.html"> <img class="home" src="/css/imagens/Home.png"> </a></li>
+      <li class="breadcrumb-item"><a href="/html/agendamento.html">Agendamento</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Pagamento</li>
+    </ol>
+  </nav>
 
   <main class="conteudo">
-    <div class="item-carrinho">
-      <div>
-        <img src="/css/imagens/toto-1.jpg" alt="toto" height=150px>
+    <!-- Resumo do pedido -->
+    <div class="resumo-pedido">
+      <h2>Resumo do Pedido</h2>
+      <div class="item-carrinho">
+        <div>
+          <img src="/css/imagens/toto-1.jpg" alt="toto" height="150px">
+        </div>
+        <div class="detalhes-item">
+          <h3 id="titulo-item">Mesa de Totó</h3>
+          <p id="subtitulo-item">Brinq+</p>
+          <p id="data-reserva">Data da Reserva: 26/08/2024</p>
+          <p id="hora-reserva">Hora da Reserva: 08:00h - 19:00h</p>
+        </div>
+        <div id="preco-item">
+          <p>R$225,00</p>
+        </div>
       </div>
-      <div class="detalhes-item">
-        <h2 id="titulo-item">Mesa de Totó</h2>
-        <p id="subtitulo-item">Brinq+</p>
-        <p id="data-reserva">Data da Reserva: 26/08/2024</p>
-        <p id="data-reserva">Hora da Reserva: 08:00h - 19:00h</p>
-      </div>
-      <div id="preco-item">
-        <p>R$225,00</p>
+
+      <div class="container-endereco">
+        <h3 class="titulo">Endereço de Entrega</h3>
+        <p id="endereco-item">Rua Exemplo, 123, Bairro, Cidade, CEP 12345-678</p>
       </div>
     </div>
-    <div class="container-endereco">
-      <h2 class="titulo">ENDEREÇO</h2>
-      <form class="formulario-endereco">
-          <div class="linha">
-              <input type="text" class="campo cidade" placeholder="Cidade">
-              <input type="text" class="campo cep" placeholder="CEP">
-              <input type="text" class="campo bairro" placeholder="Bairro">
-          </div>
-          <div class="linha">
-              <input type="text" class="campo rua" placeholder="Rua">
-              <input type="text" class="campo numero" placeholder="Número">
-              <input type="text" class="campo complemento" placeholder="Complemento">
-          </div>
-      </form>
-      <p class="observacao">Obs: A entrega fica combinada com o locatário</p>
-  </div>
-  <div class="container-pagamento">
-        <h2 class="titulopg">MÉTODO DE PAGAMENTO</h2>
-        <form class="formulario-pagamento">
-            <label class="opcao">
-                <input type="checkbox" class="checkbox">
-                PIX
-            </label>
-        </form>
+
+    <!-- Método de pagamento -->
+    <div class="container-pagamento">
+      <h3 class="titulopg">Método de Pagamento</h3>
+      <label class="opcao">
+        <input type="checkbox" class="checkbox">
+        PIX
+      </label>
+      <div class="pix-info">
+        <h4>Pix - Copia e Cola</h4>
+        <input type="text" class="campo" value="00020101021129070014br.gov.bcb.pix0002010000004005185678370001291112345678990" readonly>
+        <button onclick="copiarPix()" class="btn-copiar">Copiar</button>
+      </div>
     </div>
-    
-  </main>
+
+    <!-- Botão de confirmação -->
     <div class="confirmaçao">
-      <h1  id="total">TOTAL: 1 ITEM</h1>
-      <button id="botaoconfirmar">CONFIRMAR</button>
+      <h1 id="total">TOTAL: 1 ITEM</h1>
+      <button id="botaoconfirmar" onclick="confirmarPagamento()">Confirmar</button>
     </div>
+  </main>
 </body>
+
+<script>
+  // Função para copiar o Pix para a área de transferência
+  function copiarPix() {
+    const pixCode = document.querySelector(".pix-info input");
+    pixCode.select();
+    document.execCommand("copy");
+    alert("Código Pix copiado para a área de transferência!");
+  }
+</script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>

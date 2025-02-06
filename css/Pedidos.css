@@ -3,16 +3,10 @@
 
 
 body {
+    font-family: Inter;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    font-family: "Inter";
-    box-sizing: border-box
   }
 
 .navbar{

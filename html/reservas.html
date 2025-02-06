@@ -98,6 +98,24 @@
             cursor: pointer;
         }
 
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: white;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .breadcrumb a {
+            margin-right: 10px;
+            font-size: 16px;
+            color: #FEC95A;
+        }
+
+        .breadcrumb span {
+            color: #333;
+        }
+
         .container {
             padding: 20px;
         }
@@ -251,9 +269,15 @@
         </div>
     </nav>
 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/html/main-locador.html"> <img class="home" src="/css/imagens/Home.png"> </a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Solicitações de Reserva</li>
+        </ol>
+      </nav>
 
     <div class="container">
-        <h2>Solicitações de Reservas:</h2>
         <div class="filter-section">
             <button id="filtrar">FILTRAR</button>
             <select id="statusFiltro">
