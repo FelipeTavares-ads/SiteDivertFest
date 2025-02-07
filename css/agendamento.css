@@ -5,9 +5,76 @@
   box-sizing: border-box;
 }
 
+/* Estilo geral */
 body {
-  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
 }
+
+/* Container do formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Rótulo */
+label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Estilo dos campos select */
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Efeito quando o campo select é focado */
+select:focus {
+  border-color: #6c63ff;
+  background-color: #f1f1f8;
+  outline: none;
+}
+
+/* Estilo dos campos desabilitados (caso queira) */
+select:disabled {
+  background-color: #f4f4f4;
+  border-color: #ccc;
+}
+
+/* Alinhamento e espaçamento do botão de envio */
+button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Efeito no botão de envio */
+button:hover {
+  background-color: #5a54e1;
+}
+
 
 .navbar {
   background-color: #FEC95A;

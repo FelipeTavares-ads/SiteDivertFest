@@ -1,15 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-
 body {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f5f5f5;
-  }
+}
 
-.navbar{
+.navbar {
     background-color: var(--Botes, #FEC95A);
     filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
     display: flex;
@@ -21,28 +20,66 @@ body {
     justify-content: flex-end;
 }
 
+.navbar {
+    background-color: #FEC95A;
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
 .nav-link {
     color: #FFF;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #F28D38;
+    color: #FFF;
+    border-radius: 4px;
+}
+
+.nav-item .perfil {
+    width: 30px;
+    border-radius: 50%;
+}
+
+.dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+    background-color: var(--Botes, #FEC95A);
+    filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+}
+
+.dropdown-menu a {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     cursor: pointer;
-    padding-top: 16px;
-    text-transform: uppercase;
 }
 
-.nav-link:hover {
-    color: #2c2b2b;
-}
 
-#navbarDropdownMenuLink {
-    padding-top: 14px;
-}
- 
 .logo {
-    width: 60px;    
+    width: 60px;
 }
 
 .perfil {
@@ -75,7 +112,7 @@ body {
 }
 
 .breadcrumb {
-    background-color: #f5f5f5;
+    background-color: #FFF;
     margin-bottom: 5px;
     margin: 10px 0px 10px 0px;
     color: #000;
@@ -93,32 +130,42 @@ body {
     color: #000;
 }
 
-  main {
+main {
     padding: 20px;
 }
 
 .titulo {
     font-size: 24px;
     margin-bottom: 20px;
+    font-family: Epilogue;
+    font-weight: 700;
+    color: #2d3e50;
 }
 
 .list-pedidos {
     display: flex;
     flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
 }
 
 .pedido {
-    margin-bottom: 20px;
     display: flex;
-    padding: 15px;
+    padding: 20px;
     width: 95%;
+    max-width: 800px;
     flex-shrink: 0;
     border-radius: 13px;
     background: rgba(45, 62, 80, 0.10);
-    box-shadow: 5px 5px 4px 0px rgba(0, 0, 0, 0.25), 4px -1px 4.6px 0px rgba(0, 0, 0, 0.25);
-    align-items: flex-end;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    transition: all 0.3s ease;
+}
+
+.pedido:hover {
+    background-color: rgba(45, 62, 80, 0.15);
+    transform: translateY(-5px);
 }
 
 .pedido img {
@@ -126,147 +173,126 @@ body {
     width: 152px;
     height: 125px;
     flex-shrink: 0;
-    border-radius: 24px;
+    border-radius: 12px;
     background: url(<path-to-image>) lightgray 50% / cover no-repeat;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
 }
 
 .detalhes {
-    margin-left: 15px;
+    margin-left: 20px;
+    flex-grow: 1;
 }
 
 .detalhes h3 {
     margin: 0;
-    color: #000;
+    color: #2d3e50;
     font-family: Epilogue;
-    font-size: 28px;
-    font-style: normal;
+    font-size: 24px;
     font-weight: 700;
-    line-height: 0px; /* 0% */
+    line-height: 1.2;
     text-transform: uppercase;
-    margin-top: 18px;
 }
 
 .acoes {
     display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    width: 635px;
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 10px;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
 }
 
 .acoes p {
-    color: #000;
-    font-family: Epilogue;
+    color: #4A4A4A; /* Cor de texto mais suave */
+    font-family: 'Epilogue', sans-serif;
     font-size: 16px;
-    font-style: normal;
+    font-weight: 400;
     text-transform: uppercase;
-    margin-right: 15px;
-    margin-bottom: 0px;
+    margin: 0; /* Remove margens extras */
+    line-height: 1.2; /* Ajusta a altura da linha para alinhar melhor o texto */
+    display: inline-block; /* Garante que o parágrafo se comporte como um elemento de linha */
 }
 
-#num1{
-    color: #000;
-    font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0px; /* 0% */
-    text-transform: uppercase;
-    margin-left: 200px;
-    margin-top: 6px;
-    
+.acoes button {
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff; /* Cor do texto */
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none; /* Remove borda padrão */
+    padding: 2px 16px;
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-#num2{
-    color: #000;
-    font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0px; /* 0% */
-    text-transform: uppercase;
-    margin-left: 265px;
-    margin-top: 6px;
+
+.acoes button:hover {
+    background-color: #0056b3; /* Cor de fundo quando passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
 }
-#num3{
-    color: #000;
-    font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0px; /* 0% */
-    text-transform: uppercase;
-    margin-left: 300px;
-    margin-top: 6px;
-}
-#num4{
-    color: #000;
-    width: 100px;
-    font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0px; /* 0% */
-    text-transform: uppercase;
-    margin-left: 358px;
-    margin-top: 6px;
-}
-#num5{
-    color: #000;
-    font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 0px; /* 0% */
-    text-transform: uppercase;
-    margin-left: 287px;
-    margin-top: 6px;
+
+.acoes button:focus {
+    outline: none; /* Remove o contorno */
+    box-shadow: 0 0 0 2px #0056b3; /* Destaca o botão quando em foco */
 }
 
 
+#num1, #num2, #num3, #num4, #num5 {
+    color: #2d3e50;
+    font-family: Epilogue;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
 .detalhes p {
-    width: 500px;
-    flex-shrink: 0;
-    color: #000;
+    width: 100%;
+    color: #2d3e50;
     font-family: Epilogue;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     text-transform: uppercase;
-    margin-top: 30px;
-    line-height: 0%;
-    display: flex;
+    margin-top: 15px;
+    line-height: 1.5;
+    display: block;
 }
 
 .btn-andamento {
-    color: white;
     width: 185px;
-    height: 29px;
-    flex-shrink: 0;
+    height: 40px;
     border-radius: 5px;
     background: #2D3E50;
     color: #FFF;
     font-family: Epilogue;
-    font-size: 13px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 0px; /* 0% */
     text-transform: uppercase;
-    margin-top: 95px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
+.btn-andamento:hover {
+    background-color: #1d2d3b;
+}
 
-#btn-novo{
-    width: 93px;
-    height: 29px;
-    flex-shrink: 0;
+#btn-novo {
+    width: 100px;
+    height: 40px;
     border-radius: 5px;
     background: #34A853;
     color: #FFF;
     font-family: Epilogue;
-    font-size: 12px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 0px; /* 0% */
     text-transform: uppercase;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#btn-novo:hover {
+    background-color: #248d36;
 }

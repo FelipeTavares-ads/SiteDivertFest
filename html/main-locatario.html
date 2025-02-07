@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Home Locatário</title>
     <script type="module">
+
         import { logout } from '/js/auth.js';
         window.logout = logout;
 
@@ -20,11 +22,20 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 
         body {
+            background-color: #FFF;
             margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            background: url('menina.jpg') no-repeat center center fixed;
-            background-size: cover;
+        }
+
+        .navbar {
+            background-color: var(--Botes, #FEC95A);
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+            display: flex;
+            align-items: center;
+        }
+
+        .collapse {
+            display: flex;
+            justify-content: flex-end;
         }
 
         .navbar {
@@ -66,6 +77,58 @@
             width: 30px;
             border-radius: 50%;
         }
+
+        .dropdown-menu {
+            right: 0 !important;
+            left: auto !important;
+            background-color: var(--Botes, #FEC95A);
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .dropdown-menu a {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+        }
+
+
+        .logo {
+            width: 60px;
+        }
+
+        .perfil {
+            width: 30px;
+        }
+
+        .direita {
+            right: 0;
+            left: auto;
+        }
+
+        .sair {
+            width: 20px;
+            padding: 0px;
+        }
+
+        .dropdown-menu {
+            background-color: var(--Botes, #FEC95A);
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+        }
+
+        .dropdown-menu a {
+            color: #FFF;
+            font-family: Inter;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            cursor: pointer;
+        }
+
 
         .banner {
             width: 100%;
@@ -164,13 +227,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/html/duvidas-locatario.html">Dúvidas</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <li class="nav-item dropdown direita">
+                    <a class="nav-link dropdown-toggle direita" href="#" id="navbarDropdownMenuLink" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <img class="perfil" src="/css/imagens/perfil.png" alt="Perfil">
+                        <img class="perfil" src="/css/imagens/perfil.png" alt="oi">
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="/html/editar-locatario.html">Editar Perfil</a>
+                    <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="/html/editar-locatario.html"> Editar Perfil</a>
                         <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
                     </div>
                 </li>
