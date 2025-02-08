@@ -5,7 +5,8 @@ export async function autenticarUsuario(email, senha) {
         const response = await fetch(API_URL + "public/autentica", {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Origin": "*"
             },
             body: JSON.stringify({ usuario: email, senha: senha })
         });
