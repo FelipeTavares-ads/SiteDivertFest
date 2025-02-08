@@ -17,11 +17,6 @@
     if (!token) {
         window.location.href = "/html/login.html";  // Redireciona para a página de login
     }
-
-    // Alerta de confirmação
-    function confirmarPagamento() {
-        alert("Por favor, confirme apenas após realizar o pagamento. Aguarde nossa confirmação.");
-    }
   </script>
 </head>
 
@@ -53,7 +48,7 @@
           </a>
           <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/html/editar-locatario.html"> Editar Perfil</a>
-            <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+            <a class="dropdown-item" href="primeira-tela.html" onclick="logout()">Sair</a>
           </div>
         </li>
       </ul>
@@ -112,7 +107,10 @@
     <!-- Botão de confirmação -->
     <div class="confirmaçao">
       <h1 id="total">TOTAL: 1 ITEM</h1>
-      <button id="botaoconfirmar" onclick="confirmarPagamento()">Confirmar</button>
+      <button id="botaoconfirmar" >Confirmar</button>
+    </div>
+    <div id="successMessage" class="success-modal">
+      <p>✅ Pedido confirmado com sucesso!</p>
     </div>
   </main>
 </body>

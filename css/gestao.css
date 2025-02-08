@@ -93,6 +93,30 @@
     color: #333;
 }
 
+.btn-custom {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    min-width: 220px;
+    /* Mantém os botões proporcionais */
+}
+
+.btn-custom i {
+    margin-right: 8px;
+}
+
+
+/* Alinhando os botões lado a lado */
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    /* Espaço entre os botões */
+}
+
 #addToyButton {
     background-color: #ffd700;
     /* Amarelo suave */
@@ -100,7 +124,7 @@
     /* Texto branco */
     border: none;
     /* Sem borda */
-    border-radius: 30px;
+    border-radius: 10px;
     /* Bordas arredondadas */
     padding: 10px 20px;
     /* Espaçamento interno */
@@ -111,9 +135,9 @@
     transition: all 0.3s ease;
     position: absolute;
     /* Define a posição do botão */
-    top:150px;
+    top: 150px;
     /* Distância de 20px do topo */
-    left: 50%;
+    left: 59%;
     /* Centraliza horizontalmente */
     transform: translateX(-50%);
     /* Ajusta para que o centro do botão fique alinhado ao meio da tela */
@@ -128,8 +152,40 @@
     /* Sombra suave */
 }
 
+#dashboardButton {
+    background-color: #ffd900;
+    /* Amarelo suave */
+    color: #fff;
+    /* Texto branco */
+    border: none;
+    /* Sem borda */
+    border-radius: 10px;
+    /* Bordas arredondadas */
+    padding: 10px 20px;
+    /* Espaçamento interno */
+    font-size: 16px;
+    /* Tamanho da fonte */
+    font-weight: bold;
+    /* Negrito */
+    transition: all 0.3s ease;
+    position: absolute;
+    /* Define a posição do botão */
+    top: 150px;
+    /* Distância de 20px do topo */
+    left: 43%;
+    /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta para que o centro do botão fique alinhado ao meio da tela */
+}
 
-
+#dashboardButton:hover {
+    background-color: #ffcc00;
+    /* Amarelo mais forte ao passar o mouse */
+    transform: scale(1.1) translateX(-50%);
+    /* Aumento suave e manutenção da centralização */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
 
 .home {
     width: 24px;

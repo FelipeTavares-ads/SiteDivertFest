@@ -97,40 +97,80 @@
 }
 
 
-.lupa {
-    width: 20px;
-    color: rgba(146, 146, 146, 0.53);
-
-}
-
-.icon-lupa {
-    color: rgba(146, 146, 146, 0.53);
-    background: rgba(45, 62, 80, 0.15);
-    box-shadow: 4px 3px 2.8px 0.5px rgba(0, 0, 0, 0.25);
-    width: 40px;
-    height: 38px;
+/* Estilização do container */
+.search-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    border-radius: 10px 0 0 0px ;
-
+    gap: 20px;
+    margin-top: 50px;
 }
 
-.title-search {
+/* Container centralizado */
+.search-container {
     display: flex;
-    margin-left: 67.89px;
-    margin-top: 56.44px;
-    gap: 485.46px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 40px;
 }
 
-.title-search h2 {
-    color: #000;
-    font-family: Epilogue;
-    font-size: 33.2px;
-    font-style: normal;
+/* Título */
+.search-container h2 {
+    color: #FFD700; /* Amarelo Ouro */
+    font-family: "Epilogue", sans-serif;
+    font-size: 24px;
     font-weight: 700;
-    line-height: normal;
     text-transform: uppercase;
+}
+
+/* Caixa de pesquisa compacta */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #FFD700; /* Borda amarela */
+    border-radius: 6px;
+    padding: 6px;
+    width: 260px; /* Reduzi o tamanho */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Input menor */
+.search-box input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 6px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Placeholder */
+.search-box input::placeholder {
+    color: #FFD700;
+    font-weight: 500;
+}
+
+/* Botão de busca compacto */
+.search-box button {
+    background: #FFD700;
+    border: none;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+/* Ícone menor */
+.search-box button i {
+    color: white;
+    font-size: 14px;
+}
+
+/* Hover no botão */
+.search-box button:hover {
+    background: #e6c200;
 }
 
 .input-group {

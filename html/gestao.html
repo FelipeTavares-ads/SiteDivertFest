@@ -52,7 +52,7 @@
           </a>
           <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/html/editar-locador.html"> Editar Perfil</a>
-            <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
+            <a class="dropdown-item" href="primeira-tela.html" onclick="logout()">Sair</a>
           </div>
         </li>
       </ul>
@@ -66,15 +66,24 @@
       <li class="breadcrumb-item active" aria-current="page">Gestão</li>
     </ol>
   </nav>
-  <!-- Botão de adicionar brinquedo -->
+  <!-- Botões de adicionar brinquedo e dashboard faturamento -->
   <div class="container text-center my-5">
-    <a href="/html/adicionar-brinquedos.html">
-      <button class="btn btn-primary btn-lg" id="addToyButton">
-        <i class="fas fa-plus"></i> Adicionar Brinquedo
-      </button>
-    </a>
+    <div class="btn-group-custom">
+      <a href="/html/adicionar-brinquedos.html">
+        <button class="btn btn-primary btn-lg" id="addToyButton">
+          <i class="fas fa-plus"></i> Adicionar Brinquedo
+        </button>
+      </a>
+      <a href="/html/visaoGeral.html">
+        <button class="btn btn-secondary btn-lg" id="dashboardButton">
+          <i class="fas fa-chart-line"></i> Dashboard Vendas
+        </button>
+      </a>
+    </div>
   </div>
-  
+
+
+
 
   <div class="espaco" id="brinquedosContainer">
     <!-- Brinquedos serão inseridos aqui dinamicamente -->

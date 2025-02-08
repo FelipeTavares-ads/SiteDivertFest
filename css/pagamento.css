@@ -304,3 +304,55 @@ body {
 #botaoconfirmar:active {
     background-color: #f5b40a;
 }
+
+/* Estilização do botão */
+.btn-confirm {
+    background-color: #FFD700;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Botão em estado de carregamento */
+.btn-confirm.loading {
+    background-color: #FFA500;
+    pointer-events: none;
+}
+
+/* Botão após sucesso */
+.btn-confirm.success {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Modal de sucesso */
+.success-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #28a745;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
+}

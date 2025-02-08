@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
     <title>Tela Principal - Divert Fest</title>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@800&display=swap');
@@ -20,7 +22,7 @@
             box-sizing: border-box;
         }
 
-        .navbar{
+        .navbar {
             background-color: var(--Botes, #FEC95A);
             filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
             display: flex;
@@ -32,24 +34,49 @@
             justify-content: flex-end;
         }
 
+        .navbar {
+            background-color: #FEC95A;
+            filter: drop-shadow(0px 6px 4px rgba(0, 0, 0, 0.25));
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navbar .logo {
+            width: 50px;
+            margin-right: 20px;
+        }
+
+        .navbar-nav {
+            display: flex;
+            justify-content: flex-end;
+            flex-grow: 1;
+        }
+
         .nav-link {
             color: #FFF;
             font-family: Inter;
-            font-size: 22px; /* Um pouco maior */
-            font-style: normal;
+            font-size: 16px;
             font-weight: 700;
-            line-height: normal;
-            cursor: pointer;
-            padding-top: 16px;
             text-transform: uppercase;
+            padding: 10px 20px;
+            cursor: pointer;
         }
 
         .nav-link:hover {
-            color: #5b5b5f;
+            background-color: #F28D38;
+            color: #FFF;
+            border-radius: 4px;
+        }
+
+        .nav-item .perfil {
+            width: 30px;
+            border-radius: 50%;
         }
 
         .logo {
-            width: 80px;  /* Logo maior */
+            width: 80px;
+            /* Logo maior */
         }
 
         .perfil {
@@ -65,7 +92,8 @@
             background-image: url('/css/imagens/MENINA.jpg');
             background-size: cover;
             background-position: center;
-            height: 90vh; /* Aumentado para 90% da altura da tela */
+            height: 90vh;
+            /* Aumentado para 90% da altura da tela */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -74,20 +102,23 @@
 
         .text-container {
             font-family: 'Epilogue', sans-serif;
-            font-size: 70px; /* Tamanho maior */
+            font-size: 70px;
+            /* Tamanho maior */
             font-style: normal;
             font-weight: 800;
             line-height: normal;
             text-align: center;
             color: #FF7F50;
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 25px; /* Um pouco maior */
+            padding: 25px;
+            /* Um pouco maior */
             border-radius: 10px;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
         }
 
         .text-container h1 {
-            font-size: 70px; /* Tamanho maior */
+            font-size: 70px;
+            /* Tamanho maior */
             color: #FF7F50;
             margin-bottom: 10px;
         }
@@ -98,7 +129,8 @@
 
         .text-container h2 {
             font-family: 'Inter', sans-serif;
-            font-size: 26px; /* Aumentado um pouco */
+            font-size: 26px;
+            /* Aumentado um pouco */
             font-style: normal;
             font-weight: 700;
             color: white;
@@ -107,14 +139,18 @@
 
         .buttons-container .btn-custom {
             display: inline-block;
-            padding: 20px 50px; /* Maior padding */
-            font-size: 24px; /* Fonte maior */
+            padding: 20px 50px;
+            /* Maior padding */
+            font-size: 24px;
+            /* Fonte maior */
             font-family: 'Inter', sans-serif;
             font-weight: 700;
             color: white;
             background-color: #2D3E50;
-            border: 6px solid #FF7F50; /* Borda maior */
-            border-radius: 20px; /* Bordas arredondadas */
+            border: 6px solid #FF7F50;
+            /* Borda maior */
+            border-radius: 20px;
+            /* Bordas arredondadas */
             text-align: center;
             text-decoration: none;
             cursor: pointer;
@@ -131,16 +167,19 @@
         }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg">
-        <img class="logo" src=/css/imagens/logo.png alt="Logo Divert Fest">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+        <img class="logo" src="/css/imagens/logo.png" alt="Logo Divert Fest">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/html/primeira-tela.html">HOME <span class="sr-only">(Página atual)</span></a>
+                    <a class="nav-link" href="/html/main-locatario.html">HOME </a> <span class="sr-only">(Página
+                        atual)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/html/explorar-locatario.html">EXPLORAR</a>
@@ -148,8 +187,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/html/duvidas-locatario.html">DÚVIDAS</a>
                 </li>
-                <li class="nav-item log">
-                    <a class="nav-link log-0" href="/html/login.html">ENTRAR</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="/html/login.html">ENTRAR</a>
                 </li>
             </ul>
         </div>
@@ -168,7 +207,14 @@
         </div>
     </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
 </html>
