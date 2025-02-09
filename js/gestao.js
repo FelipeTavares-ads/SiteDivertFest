@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 function renderBrinquedos(brinquedos) {
   const container = document.getElementById('brinquedosContainer');
-  container.innerHTML = '';  // Limpa o conteúdo existente
+  container.innerHTML = '';
 
   brinquedos.forEach(brinquedo => {
     const blocoHTML = `
@@ -25,10 +25,10 @@ function renderBrinquedos(brinquedos) {
               <div class="dados">
                 <div class="title">
                   <h4>${brinquedo.nome}</h4>
-                  <!-- Alteração do link para incluir o ID do brinquedo -->
                   <a class="edit" href="editar-brinquedo.html?id=${brinquedo.idBrinquedo}">
                   <img src="/css/imagens/pencil-edit-button-svgrepo-com.svg" alt="editar"></a>
-                  <a class="edit" href=""> <img src="/css/imagens/trash-bin-2-svgrepo-com.svg" alt="delete"> </a>
+                  <a class="edit" href="#" data-id="${brinquedo.idBrinquedo}"> 
+                  <img src="/css/imagens/trash-bin-2-svgrepo-com.svg" alt="delete"> </a>
                 </div>
                 
                 <div class="specs">
@@ -50,4 +50,42 @@ function renderBrinquedos(brinquedos) {
     container.insertAdjacentHTML('beforeend', blocoHTML);
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById('brinquedosContainer');
 
+  if (container) {
+    container.addEventListener("click", function (event) {
+      if (event.target.closest('.edit') && event.target.closest('.edit').hasAttribute('data-id')) {
+        event.preventDefault(); 
+
+        const idBrinquedo = event.target.closest('.edit').getAttribute('data-id');
+
+        if (idBrinquedo) {
+          fetch(`http://localhost:8080/divertfest/api/v1/locador/brinquedos/${idBrinquedo}`, {
+            method: 'DELETE',
+            headers: {
+              'Authorization': `Bearer ${localStorage.getItem("bearerToken")}`, 
+              'Content-Type': 'application/json'
+            }
+          })
+          .then(response => {
+            if (response.status === 204) {
+              alert('Brinquedo excluído com sucesso!');
+              window.location.reload();
+            } else {
+              return response.json();  
+            }
+          })
+          .catch(error => {
+            console.error('Erro ao excluir brinquedo:', error);
+            alert('Ocorreu um erro ao tentar excluir o brinquedo.');
+          });
+        } else {
+          alert("ID do brinquedo não encontrado!");
+        }
+      }
+    });
+  } else {
+    console.error("Contêiner de brinquedos não encontrado.");
+  }
+});
