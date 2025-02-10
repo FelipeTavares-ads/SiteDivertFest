@@ -314,24 +314,30 @@
   }
 
   .botao-pronto{
-    margin-top: 18px;
+    display: flex;
     justify-content: center;
-    display: grid;
-
+    align-items: center;
+    padding-top: 16px;
   }
 
-  .botao-pronto button {
+  .botao-pronto button{
+    width: 25%;
+    height: 3rem;
+    border: 0px;
+    flex-shrink: 0;
     border-radius: 50px;
     background: #FEC95A;
-    flex-shrink: 0;
     color: #FFF;
+    text-align: center;
     font-family: Inter;
-    font-size: 24px;
+    font-size: 36px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 10px 20px;
-    border-color: #FFCB59;
-    margin-top: 15px;
-    text-decoration: none;
+  }
+
+  .botao-pronto :hover{
+    background-color: #FED378;
+    cursor: pointer;
+    border: 0.1px solid #FEC95A;
   }
