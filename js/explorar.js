@@ -1,14 +1,13 @@
 import { fetchBrinquedos } from './api/api.js';
 
 document.addEventListener('DOMContentLoaded', async () => {
-
     try {
         const token = localStorage.getItem("bearerToken");
         const brinquedos = await fetchBrinquedos(token);
         renderizarBrinquedos(brinquedos);
     } catch (error) {
         alert('Não foi possível carregar os brinquedos.');
-        console.log(error)
+        console.log(error);
     }
 });
 
@@ -20,7 +19,6 @@ function renderizarBrinquedos(brinquedos) {
         const precoFormatado = brinquedo.precoPorHora.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         // Adicionar brinquedo no carrossel
         const isActive = index === 0 ? 'active' : '';
-        brinquedo.precoPorHora.toString();
         const carouselItem = `
             <div class="carousel-item ${isActive}">
                 <div class="row justify-content-center">
@@ -31,9 +29,9 @@ function renderizarBrinquedos(brinquedos) {
                                 <h5 class="card-title">${brinquedo.nome}</h5>
                                 <div class="info">
                                     <p class="card-text">${brinquedo.dono}</p>
-                                    <p class="card-price">${brinquedo.precoPorHora.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</p>
+                                    <p class="card-price">${precoFormatado}</p>
                                 </div>
-                                <a class="detalhes" href="#">+ VER MAIS DETALHES</a>
+                                <a class="detalhes" href="agendamento.html?idbrinquedo=${brinquedo.id}">+ VER MAIS DETALHES</a>
                             </div>
                         </div>
                     </div>
@@ -52,8 +50,8 @@ function renderizarBrinquedos(brinquedos) {
                         <p>${brinquedo.dono}</p>
                     </div>
                     <div class="info-inferior">
-                        <h5>${brinquedo.precoPorHora.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>
-                        <a href="#"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
+                        <h5>${precoFormatado}</h5>
+                        <a href="agendamento.html?idbrinquedo=${brinquedo.idBrinquedo}"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
                     </div>
                 </div>
             </div>

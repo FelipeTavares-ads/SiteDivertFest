@@ -4,16 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="shortcut icon" href="/css/imagens/logo.ico.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/css/imagens/logo.ico" type="image/x-icon">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/agendamento.css">
   <title>Agendamento</title>
-  <script>
+  <script type="module">
     import { logout } from '/js/auth.js';
     window.logout = logout;
     const token = localStorage.getItem("bearerToken");
-    if (!token) window.location.href = "/html/login.html"; 
+    if (!token) window.location.href = "/html/login.html";
   </script>
 </head>
 
@@ -60,9 +60,10 @@
   </nav>
 
   <div class="agendamento-item">
-    <img src="/css/imagens/toto-1.jpg" alt="Mesa de Totó" class="item-img">
+    <img src="" alt="Imagem do Brinquedo" class="item-img">
     <div class="item-info">
-      <h2 class="title">Mesa de Totó</h2>
+      <h2 class="title"></h2>
+      <p class="details"></p>
       <p class="details">Data de Reserva:
         <input type="date" class="form-control" id="dataReserva">
       </p>
@@ -105,13 +106,13 @@
         <option value="23:00">23:00</option>
       </select>
 
-      <p class="price">R$225,00</p>
+      <p class="price"></p>
     </div>
   </div>
 
   <div class="agendamento-detalhes">
-    <div class="total"><strong>Total:</strong> R$247,50</div>
-    <a href="Pagamento.html">
+    <div class="total"><strong>Total:</strong> <span id="precototal">R$0,00</span></div>
+    <a id="confirmarButton" href="javascript:void(0);">
       <button type="button" class="btn btn-confirm">Confirmar</button>
     </a>
   </div>
@@ -120,6 +121,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script type="module" src="/js/agendamentos.js"></script>
   <script>
     function validarHoras() {
       const horaInicio = document.getElementById("hora-inicio").value;
@@ -129,8 +131,11 @@
       const minutosFim = converterParaMinutos(horaFim);
   
       if (minutosFim <= minutosInicio) {
-        alert("A hora de fim não pode ser menor que a hora de início.");
+        alert("A hora de fim não pode ser menor ou igual à hora de início.");
         document.getElementById("hora-fim").value = "";
+        document.getElementById('precototal').innerText = 'R$0,00';
+      } else {
+        calcularPrecoTotal();
       }
     }
   
@@ -139,6 +144,57 @@
       const [horas, minutos] = hora.split(":");
       return parseInt(horas) * 60 + parseInt(minutos);
     }
+
+    // Função para calcular o preço total
+    function calcularPrecoTotal() {
+      const horaInicio = document.getElementById("hora-inicio").value;
+      const horaFim = document.getElementById("hora-fim").value;
+      const minutosInicio = converterParaMinutos(horaInicio);
+      const minutosFim = converterParaMinutos(horaFim);
+
+      if (minutosFim <= minutosInicio) {
+        document.getElementById('precototal').innerText = 'R$0,00';
+        return;
+      }
+
+      const duracaoHoras = (minutosFim - minutosInicio) / 60;
+      const precoPorHora = parseFloat(document.querySelector('.price').innerText.replace('R$', '').replace(',', '.'));
+      
+      if (isNaN(precoPorHora)) {
+        document.getElementById('precototal').innerText = 'R$0,00';
+        return;
+      }
+      
+      const precoTotal = duracaoHoras * precoPorHora;
+
+      document.getElementById('precototal').innerText = `R$${precoTotal.toFixed(2).replace('.', ',')}`;
+    }
+
+    document.getElementById("hora-inicio").addEventListener('change', calcularPrecoTotal);
+    document.getElementById("hora-fim").addEventListener('change', calcularPrecoTotal);
+
+    document.getElementById("confirmarButton").addEventListener('click', function() {
+      const dataReserva = document.getElementById("dataReserva").value;
+      const horaInicio = document.getElementById("hora-inicio").value;
+      const horaFim = document.getElementById("hora-fim").value;
+      const idBrinquedo = new URLSearchParams(window.location.search).get('idbrinquedo');
+      const precoTotal = document.getElementById('precototal').innerText;
+
+      if (!dataReserva || !horaInicio || !horaFim || !idBrinquedo) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+      }
+
+      const params = new URLSearchParams({
+        dataReserva,
+        horaInicio,
+        horaFim,
+        idBrinquedo,
+        precoTotal
+      });
+
+      window.location.href = `/html/pagamento.html?${params.toString()}`;
+    });
   </script>
 </body>
 

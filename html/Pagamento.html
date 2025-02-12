@@ -18,6 +18,7 @@
         window.location.href = "/html/login.html";  // Redireciona para a página de login
     }
   </script>
+  <script type="module" src="/js/pagamento.js"></script>
 </head>
 
 <body>
@@ -48,7 +49,7 @@
           </a>
           <div class="dropdown-menu direita" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/html/editar-locatario.html"> Editar Perfil</a>
-            <a class="dropdown-item" href="primeira-tela.html" onclick="logout()">Sair</a>
+            <a class="dropdown-item" href="javascript:void(0);" onclick="logout()">Sair</a>
           </div>
         </li>
       </ul>
@@ -58,7 +59,7 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item">
-        <a href="/html/main-locador.html">
+        <a href="/html/main-locatario.html">
           <img class="home" src="/css/imagens/Home.png" alt="Home">
         </a>
       </li>
@@ -75,17 +76,15 @@
       <h2>Resumo do Pedido</h2>
       <div class="item-carrinho">
         <div>
-          <img src="/css/imagens/toto-1.jpg" alt="toto" height="150px">
+          <img src="" alt="Imagem do Brinquedo" height="150px">
         </div>
         <div class="detalhes-item">
-          <h3 id="titulo-item">Mesa de Totó</h3>
-          <p id="subtitulo-item">Brinq+</p>
-          <p id="data-reserva">Data da Reserva: 26/08/2024</p>
-          <p id="hora-reserva">Hora da Reserva: 08:00h - 19:00h</p>
+          <h3 id="titulo-item"></h3>
+          <p id="subtitulo-item"></p>
+          <p id="data-reserva"></p>
+          <p id="hora-reserva"></p>
         </div>
-        <div id="preco-item">
-          <p>R$225,00</p>
-        </div>
+        <div id="preco-item"></div>
       </div>
 
       <div class="container-endereco">
@@ -105,11 +104,11 @@
     </div>
 
     <!-- Botão de confirmação -->
-    <div class="confirmaçao">
+    <div class="confirmacao">
       <h1 id="total">TOTAL: 1 ITEM</h1>
-      <button id="botaoconfirmar" >Confirmar</button>
+      <button id="botaoconfirmar">Confirmar</button>
     </div>
-    <div id="successMessage" class="success-modal">
+    <div id="successMessage" class="success-modal" style="display: none;">
       <p>✅ Pedido confirmado com sucesso!</p>
     </div>
   </main>

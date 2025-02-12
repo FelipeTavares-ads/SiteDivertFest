@@ -13,8 +13,12 @@
 
         // Verifica se o usuário está logado
         const token = localStorage.getItem("bearerToken");
+        const role =  localStorage.getItem("role");
         if (!token) {
             window.location.href = "/html/login.html";  // Redireciona para a página de login
+        }
+        if(role != "LOCADOR"){
+            window.location.href = "/html/main-locatario.html"
         }
     </script>
     <style>

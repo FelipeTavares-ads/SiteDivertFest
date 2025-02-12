@@ -1,10 +1,9 @@
 import { autenticarUsuario, cadastraUsuario, cadastraLocador, editaDadosBancarios } from './api/api.js';
 
 export function logout() {
-    // Remove o token do localStorage
-    localStorage.removeItem("bearerToken");
-
-    // Redireciona para a página de login
+    localStorage.clear("bearerToken");
+    localStorage.setItem("logado", false)   
+    
     window.location.href = "/html/primeira-tela.html";
 }
 
