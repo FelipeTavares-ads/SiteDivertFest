@@ -66,7 +66,7 @@
     margin: 0px 30px 15px 30px;
   }
 
-  .botao{
+  .dropdown .btn{
     flex-shrink: 0;
     border-radius: 20px;
     border: 3px solid #FFF;
@@ -79,11 +79,6 @@
     font-weight: 700;
     line-height: normal;
     text-decoration: none;
-  }
-
-  .botao:hover{
-    color: #FEC95A;
-    background-color: #fff;
   }
 
   .header-back{
@@ -220,6 +215,12 @@
     line-height: normal;
   }
 
+  .botao-logar :hover{
+    background-color: #FED378;
+    cursor: pointer;
+    border: 0.1px solid #FEC95A;
+  }
+
   .esquecisenha{
     text-decoration: none;
     color: #2D3E50;
@@ -266,3 +267,22 @@
     margin-top: 10px;
     padding-top: 5px;
   }
+
+  .dropdown-menu {
+    background-color: #FEC95A;
+    border-radius: 30px;
+  }
+
+  .dropdown-menu h6{
+    color: rgb(27, 27, 27);
+  }
+
+  .dropdown-menu a{
+    color: black;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}

@@ -153,10 +153,10 @@ main {
     display: flex;
     padding: 20px;
     width: 95%;
-    max-width: 800px;
+    max-width: 1100px;
     flex-shrink: 0;
     border-radius: 13px;
-    background: rgba(45, 62, 80, 0.10);
+    background: rgba(255, 255, 255, 0.1);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
     align-items: flex-start;
     transition: all 0.3s ease;
