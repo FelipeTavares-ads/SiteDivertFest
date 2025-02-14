@@ -1,4 +1,4 @@
-import { fetchAgendamentos } from './api/api.js';
+import { fetchAgendamentos, cancelarPedido } from './api/api.js';
 const role = localStorage.getItem("role");
 if (role == 'LOCATARIO') {
     document.addEventListener('DOMContentLoaded', async () => {
@@ -30,7 +30,7 @@ if (role == 'LOCATARIO') {
                 if (agendamento.status === 'AGUARDANDO_PAGAMENTO') {
                     const btnAndamento = document.createElement('button');
                     btnAndamento.classList.add('btn-andamento');
-                    btnAndamento.textContent = 'PEDIDO EM ANDAMENTO';
+                    btnAndamento.textContent = 'Processando';
                     acoesDiv.appendChild(btnAndamento);
                 } else if (agendamento.status === 'FINALIZADO') {
                     const pFinalizado = document.createElement('p');
@@ -44,6 +44,12 @@ if (role == 'LOCATARIO') {
                     const pConfirmado = document.createElement('p');
                     pConfirmado.textContent = 'PEDIDO CONFIRMADO';
                     acoesDiv.appendChild(pConfirmado);
+                    const btnCancelar = document.createElement('button');
+                    btnCancelar.textContent = 'Cancelar Pedido';
+                    btnCancelar.style.marginLeft = '10px';
+                    btnCancelar.addEventListener('click', () => cancelarPedido(agendamento.idAgendamento));
+
+                    acoesDiv.appendChild(btnCancelar);
                 }
                 pedidoDiv.appendChild(acoesDiv);
 
@@ -53,4 +59,5 @@ if (role == 'LOCATARIO') {
             console.error('Erro ao carregar agendamentos:', error);
         }
     });
+
 } //aqui deveria haver uma implementação dos pedidos gerais do locador, mas a tela foi separada para gestão  do locador. - rick

@@ -187,15 +187,15 @@ export function fetchBrinquedosGestao(token) {
             'Content-Type': 'application/json'
         }
     })
-    .then(response => response.json())
-    .catch(error => {
-        console.error('Error fetching brinquedos:', error);
-        throw error;
-    });
+        .then(response => response.json())
+        .catch(error => {
+            console.error('Error fetching brinquedos:', error);
+            throw error;
+        });
 }
 
 export async function editaDadosBancarios(token, dados) {
-    const response = await fetch(API_URL+"locador/dados-bancario", {
+    const response = await fetch(API_URL + "locador/dados-bancario", {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json",
@@ -216,98 +216,122 @@ export async function editaDadosBancarios(token, dados) {
     } else {
         alert("Falha ao salvar seus dados. Tente novamente mais tarde.");
     }
-    
+
 }
 
 export async function fetchBrinquedo(idBrinquedo) {
     const token = localStorage.getItem("bearerToken");
     if (!token) {
-      window.location.href = "/html/login.html";
-      return;
+        window.location.href = "/html/login.html";
+        return;
     }
-  
+
     try {
-      const response = await fetch(API_URL+`brinquedos/${idBrinquedo}`, {
-        headers: {
-          'Authorization': `Bearer ${token}`
+        const response = await fetch(API_URL + `brinquedos/${idBrinquedo}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erro: ${response.statusText}`);
         }
-      });
-      
-      if (!response.ok) {
-        throw new Error(`Erro: ${response.statusText}`);
-      }
-  
-      const brinquedo = await response.json();
-      return brinquedo;
-    } catch (error) {
-      console.error("Erro ao buscar dados do brinquedo:", error);
-    }
-  }
 
-  export async function criarAgendamento(agendamento) {
+        const brinquedo = await response.json();
+        return brinquedo;
+    } catch (error) {
+        console.error("Erro ao buscar dados do brinquedo:", error);
+    }
+}
+
+export async function criarAgendamento(agendamento) {
     const token = localStorage.getItem('bearerToken');
     try {
-      const response = await fetch(API_URL+'agendamentos', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-        body: JSON.stringify(agendamento),
-      });
-  
-      if (!response.ok) {
-        throw new Error('Erro ao criar agendamento');
-      }
-  
-      return await response.json();
-    } catch (error) {
-      console.error('Erro na criação do agendamento:', error);
-      throw error;
-    }
-  }
+        const response = await fetch(API_URL + 'agendamentos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+            body: JSON.stringify(agendamento),
+        });
 
-  export async function fetchAgendamentos() {
+        if (!response.ok) {
+            throw new Error('Erro ao criar agendamento');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Erro na criação do agendamento:', error);
+        throw error;
+    }
+}
+
+export async function fetchAgendamentos() {
     const token = localStorage.getItem('bearerToken');
     try {
-      const response = await fetch(API_URL + 'locatario/agendamentos', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-      });
-  
-      if (!response.ok) {
-        throw new Error('Erro ao buscar agendamentos');
-      }
-  
-      return await response.json();
-    } catch (error) {
-      console.error('Erro ao buscar agendamentos:', error);
-      throw error;
-    }
-  }
+        const response = await fetch(API_URL + 'locatario/agendamentos', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        });
 
-  export async function fetchReservasLocador() {
+        if (!response.ok) {
+            throw new Error('Erro ao buscar agendamentos');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Erro ao buscar agendamentos:', error);
+        throw error;
+    }
+}
+
+export async function fetchReservasLocador() {
     const token = localStorage.getItem('bearerToken');
     try {
-      const response = await fetch(API_URL + 'locador/agendamentos', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`,
-        },
-      });
-  
-      if (!response.ok) {
-        throw new Error('Erro ao buscar agendamentos');
-      }
-  
-      return await response.json();
-    } catch (error) {
-      console.error('Erro ao buscar agendamentos:', error);
-      throw error;
-    }
-  }
+        const response = await fetch(API_URL + 'locador/agendamentos', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        });
 
+        if (!response.ok) {
+            throw new Error('Erro ao buscar agendamentos');
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Erro ao buscar agendamentos:', error);
+        throw error;
+    }
+}
+
+export async function cancelarPedido(idAgendamento, pedidoDiv) {
+    if (!confirm('Tem certeza que deseja cancelar este pedido?')) return;
+
+    const token = localStorage.getItem('bearerToken');
+
+    try {
+        const response = await fetch(API_URL + `locatario/agendamentos/${idAgendamento}/cancelar`, {
+            method: 'PATCH',
+            headers: { 
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`,
+            },
+        });
+
+        if (!response.ok) {
+            throw new Error('Erro ao cancelar o pedido.');
+        }
+
+        alert('Pedido cancelado com sucesso!');
+        pedidoDiv.remove(); 
+    } catch (error) {
+        alert(error.message);
+    }
+}

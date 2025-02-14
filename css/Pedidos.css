@@ -163,7 +163,7 @@ main {
 }
 
 .pedido:hover {
-    background-color: rgba(45, 62, 80, 0.15);
+    background-color: rgba(245, 255, 155, 0.15);
     transform: translateY(-5px);
 }
 
