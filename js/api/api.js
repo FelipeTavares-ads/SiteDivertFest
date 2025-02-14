@@ -15,8 +15,8 @@ export async function autenticarUsuario(email, senha) {
             const dados = await response.json();
             const token = dados.token;
             const role = dados.role;
-            localStorage.setItem("logado", true)
-            console.log("DEBUG -> ROLE SALVA, " + role)
+            localStorage.setItem("logado", "true");
+            console.log("DEBUG -> ROLE SALVA, " + role);
             localStorage.setItem("role", role);
             localStorage.setItem("bearerToken", token);
 
@@ -311,3 +311,15 @@ export async function fetchBrinquedo(idBrinquedo) {
     }
   }
 
+  export async function buscarBrinquedoPorNome(nome) {
+    const token = localStorage.getItem("bearerToken");
+    const response = await fetch(API_URL + `brinquedos/nome/${nome}`, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    });
+    if (!response.ok) {
+        throw new Error(`Erro ao buscar brinquedo: ${response.statusText}`);
+    }
+    return response.json();
+}

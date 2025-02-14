@@ -9,13 +9,13 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Home Locatário</title>
     <script type="module">
-
         import { logout } from '/js/auth.js';
         window.logout = logout;
 
+        // Verifica se o usuário está logado
         const token = localStorage.getItem("bearerToken");
         if (!token) {
-            window.location.href = "/html/login.html";
+            window.location.href = "/html/login.html";  // Redireciona para a página de login
         }
     </script>
     <style>

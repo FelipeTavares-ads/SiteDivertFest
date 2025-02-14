@@ -1,9 +1,11 @@
 import { autenticarUsuario, cadastraUsuario, cadastraLocador, editaDadosBancarios } from './api/api.js';
 
 export function logout() {
-    localStorage.clear("bearerToken");
-    localStorage.setItem("logado", false)   
-    
+    localStorage.removeItem("bearerToken");
+    localStorage.removeItem("role");
+    localStorage.setItem("logado", "false");
+    sessionStorage.clear();
+
     window.location.href = "/html/primeira-tela.html";
 }
 
@@ -80,26 +82,3 @@ document.getElementById("btnSalvar")?.addEventListener("click", function (event)
 
 });
 
-document.getElementById("botaoconfirmar").addEventListener("click", function () {
-    let button = this;
-    let modal = document.getElementById("successMessage");
-
-    // Muda estado para carregando
-    button.textContent = "Processando...";
-    button.classList.add("loading");
-
-    setTimeout(() => {
-        // Altera para sucesso
-        button.innerHTML = "Pedido Confirmado ✅";
-        button.classList.remove("loading");
-        button.classList.add("success");
-
-        // Exibe modal de sucesso
-        modal.style.display = "block";
-
-        setTimeout(() => {
-            modal.style.display = "none"; // Esconde modal
-            window.location.href = "pedidos.html"; // Redireciona para pedidos.html
-        }, 2000); // Tempo total antes do redirecionamento (2s)
-    }, 2000); // Tempo do processamento fake (2s)
-});
