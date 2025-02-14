@@ -1,6 +1,5 @@
 import { fetchBrinquedos, buscarBrinquedoPorNome } from './api/api.js';
 
-
 document.addEventListener('DOMContentLoaded', async () => {
     try {
         const token = localStorage.getItem("bearerToken");
@@ -32,7 +31,6 @@ function renderizarBrinquedos(brinquedos) {
                                     <p class="card-text">${brinquedo.dono}</p>
                                     <p class="card-price">${precoFormatado}</p>
                                 </div>
-                                <a class="detalhes" href="agendamento.html?idbrinquedo=${brinquedo.id}">+ VER MAIS DETALHES</a>
                             </div>
                         </div>
                     </div>
@@ -52,7 +50,6 @@ function renderizarBrinquedos(brinquedos) {
                     </div>
                     <div class="info-inferior">
                         <h5>${precoFormatado}</h5>
-                        <a href="agendamento.html?idbrinquedo=${brinquedo.idBrinquedo}"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
                     </div>
                 </div>
             </div>
@@ -102,7 +99,6 @@ function exibirBrinquedos(brinquedos) {
                     </div>
                     <div class="info-inferior">
                         <h5>${precoFormatado}</h5>
-                        <a href="agendamento.html?idbrinquedo=${brinquedo.idBrinquedo}"><img class="prox" src="/css/imagens/right-arrow-circle-svgrepo-com.svg"></a>
                     </div>
                 </div>
             </div>
