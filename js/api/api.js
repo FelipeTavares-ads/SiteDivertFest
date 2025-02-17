@@ -139,7 +139,7 @@ function limparFormulario() {
 
 export async function fetchBrinquedos(token) {
     try {
-        const response = await fetch('http://localhost:8080/divertfest/api/v1/brinquedos', {
+        const response = await fetch(API_URL+'public/brinquedos', {
             method: "GET",
             headers: {
                 'Authorization': `Bearer ${token}`,
